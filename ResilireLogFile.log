@@ -1,0 +1,994 @@
+2021-05-28 00:19:39.459  INFO 2352 --- [restartedMain] br.com.resilire.ResilireApplication      : Starting ResilireApplication using Java 15.0.2 on CTNDELL7JZVJB3 with PID 2352 (C:\Users\mayara.barranco\Downloads\resilire\target\classes started by mayara.barranco in C:\Users\mayara.barranco\Downloads\resilire)
+2021-05-28 00:19:39.482  INFO 2352 --- [restartedMain] br.com.resilire.ResilireApplication      : No active profile set, falling back to default profiles: default
+2021-05-28 00:19:39.555  INFO 2352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-28 00:19:39.556  INFO 2352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-28 00:19:40.461  INFO 2352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-28 00:19:40.548  INFO 2352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 5 JPA repository interfaces.
+2021-05-28 00:19:41.274  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-28 00:19:41.284  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-28 00:19:41.285  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-28 00:19:41.457  INFO 2352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-28 00:19:41.458  INFO 2352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1902 ms
+2021-05-28 00:19:41.679 DEBUG 2352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6f77cf79
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/C:/Users/mayara.barranco/Downloads/resilire/target/classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		br.com.resilire.model.Consulta
+		br.com.resilire.model.Endereco
+		br.com.resilire.model.Paciente
+		br.com.resilire.model.Prontuario
+		br.com.resilire.model.Psicologo]
+	Mapping files names []
+	Properties []
+2021-05-28 00:19:41.692 DEBUG 2352 --- [restartedMain] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2021-05-28 00:19:41.694 DEBUG 2352 --- [restartedMain] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2021-05-28 00:19:41.696 DEBUG 2352 --- [restartedMain] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2021-05-28 00:19:41.733  INFO 2352 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-28 00:19:41.735 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-05-28 00:19:41.849 DEBUG 2352 --- [restartedMain] o.hibernate.service.spi.ServiceBinding   : Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2021-05-28 00:19:41.859 DEBUG 2352 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2021-05-28 00:19:41.860 DEBUG 2352 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2021-05-28 00:19:41.875  INFO 2352 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-28 00:19:41.902 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@4273b179
+2021-05-28 00:19:41.902 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@4273b179
+2021-05-28 00:19:41.902 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4273b179
+2021-05-28 00:19:41.903 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6d8f07ee
+2021-05-28 00:19:41.904 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@6a61184e
+2021-05-28 00:19:41.905 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@20c02298
+2021-05-28 00:19:41.905 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@1511b0e8
+2021-05-28 00:19:41.906 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@1511b0e8
+2021-05-28 00:19:41.906 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1511b0e8
+2021-05-28 00:19:41.907 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@339292b
+2021-05-28 00:19:41.908 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@339292b
+2021-05-28 00:19:41.908 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@339292b
+2021-05-28 00:19:41.909 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7b990f39
+2021-05-28 00:19:41.909 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7b990f39
+2021-05-28 00:19:41.909 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7b990f39
+2021-05-28 00:19:41.910 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@1b46872f
+2021-05-28 00:19:41.910 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@1b46872f
+2021-05-28 00:19:41.910 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@1b46872f
+2021-05-28 00:19:41.911 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@1c3db9ba
+2021-05-28 00:19:41.911 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@1c3db9ba
+2021-05-28 00:19:41.912 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@1c3db9ba
+2021-05-28 00:19:41.912 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@433d9142
+2021-05-28 00:19:41.913 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@433d9142
+2021-05-28 00:19:41.913 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@433d9142
+2021-05-28 00:19:41.914 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@c427a53
+2021-05-28 00:19:41.914 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@c427a53
+2021-05-28 00:19:41.914 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@c427a53
+2021-05-28 00:19:41.915 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@77efe4c8
+2021-05-28 00:19:41.915 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@77efe4c8
+2021-05-28 00:19:41.917 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@145e197d
+2021-05-28 00:19:41.917 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@145e197d
+2021-05-28 00:19:41.917 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@7141eaf9
+2021-05-28 00:19:41.917 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@7141eaf9
+2021-05-28 00:19:41.918 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@7294505b
+2021-05-28 00:19:41.918 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@39a2959a
+2021-05-28 00:19:41.919 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@79f44938
+2021-05-28 00:19:41.921 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@79f44938
+2021-05-28 00:19:41.921 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@21a372a3
+2021-05-28 00:19:41.922 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@21a372a3
+2021-05-28 00:19:41.923 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@528df11a
+2021-05-28 00:19:41.923 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@528df11a
+2021-05-28 00:19:41.924 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@33e58062
+2021-05-28 00:19:41.924 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@33e58062
+2021-05-28 00:19:41.925 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@4bd1f3e8
+2021-05-28 00:19:41.926 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@4bd1f3e8
+2021-05-28 00:19:41.927 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@3a1bb522
+2021-05-28 00:19:41.927 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@3a1bb522
+2021-05-28 00:19:41.928 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@680da19
+2021-05-28 00:19:41.929 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@680da19
+2021-05-28 00:19:41.930 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@1d4fed32
+2021-05-28 00:19:41.930 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@1d4fed32
+2021-05-28 00:19:41.932 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@163d6eda
+2021-05-28 00:19:41.932 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@163d6eda
+2021-05-28 00:19:41.933 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@77095919
+2021-05-28 00:19:41.933 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@77095919
+2021-05-28 00:19:41.934 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@5af8f880
+2021-05-28 00:19:41.934 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@5af8f880
+2021-05-28 00:19:41.935 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@2a804868
+2021-05-28 00:19:41.936 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@2a804868
+2021-05-28 00:19:41.936 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@2a804868
+2021-05-28 00:19:41.937 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@65975cb2
+2021-05-28 00:19:41.938 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@102d7f00
+2021-05-28 00:19:41.939 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@102d7f00
+2021-05-28 00:19:41.939 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@102d7f00
+2021-05-28 00:19:41.939 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6e88b8a0
+2021-05-28 00:19:41.940 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@348b77c3
+2021-05-28 00:19:41.941 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@44c62907
+2021-05-28 00:19:41.941 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@44c62907
+2021-05-28 00:19:41.942 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@5088d6a9
+2021-05-28 00:19:41.943 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5088d6a9
+2021-05-28 00:19:41.944 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@42ca4d7e
+2021-05-28 00:19:41.944 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@42ca4d7e
+2021-05-28 00:19:41.945 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@2bec36f4
+2021-05-28 00:19:41.945 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@2bec36f4
+2021-05-28 00:19:41.946 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@7534d8b2
+2021-05-28 00:19:41.946 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@7534d8b2
+2021-05-28 00:19:41.947 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@69edc16a
+2021-05-28 00:19:41.948 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@51a5dd08
+2021-05-28 00:19:41.948 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@51a5dd08
+2021-05-28 00:19:41.949 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@51a5dd08
+2021-05-28 00:19:41.950 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1db7bae9
+2021-05-28 00:19:41.950 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1db7bae9
+2021-05-28 00:19:41.950 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1db7bae9
+2021-05-28 00:19:41.951 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@360a3651
+2021-05-28 00:19:41.952 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@62c845d3
+2021-05-28 00:19:41.953 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@51fcedb6
+2021-05-28 00:19:41.953 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@51fcedb6
+2021-05-28 00:19:41.953 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@51fcedb6
+2021-05-28 00:19:41.954 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@100962b
+2021-05-28 00:19:41.954 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@100962b
+2021-05-28 00:19:41.954 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@100962b
+2021-05-28 00:19:41.955 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@464f211
+2021-05-28 00:19:41.955 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@3e7150c4
+2021-05-28 00:19:41.956 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@7075a087
+2021-05-28 00:19:41.957 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7075a087
+2021-05-28 00:19:41.957 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@497ef275
+2021-05-28 00:19:41.958 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@754ba197
+2021-05-28 00:19:41.959 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@754ba197
+2021-05-28 00:19:41.960 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@572446de
+2021-05-28 00:19:41.960 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@572446de
+2021-05-28 00:19:41.961 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@55756ba8
+2021-05-28 00:19:41.961 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1f0b680d
+2021-05-28 00:19:41.963 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@24093f44
+2021-05-28 00:19:41.966 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@472401f8
+2021-05-28 00:19:41.966 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@472401f8
+2021-05-28 00:19:41.967 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@4af71f96
+2021-05-28 00:19:41.967 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@2fb7d358
+2021-05-28 00:19:41.967 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@135821f0
+2021-05-28 00:19:41.967 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@6191a8a3
+2021-05-28 00:19:41.968 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@13e810a8
+2021-05-28 00:19:41.968 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@2d43c9e
+2021-05-28 00:19:41.968 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@50d1da95
+2021-05-28 00:19:41.968 DEBUG 2352 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3c69a49c
+2021-05-28 00:19:41.980 DEBUG 2352 --- [restartedMain] o.h.boot.internal.BootstrapContextImpl   : Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@63a2513a] into BootstrapContext; was [null]
+2021-05-28 00:19:41.980 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@63a2513a) [was null]
+2021-05-28 00:19:41.980 DEBUG 2352 --- [restartedMain] o.h.boot.internal.BootstrapContextImpl   : Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@dbc86f9] into BootstrapContext; was [null]
+2021-05-28 00:19:41.981 DEBUG 2352 --- [restartedMain] o.h.boot.internal.BootstrapContextImpl   : Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@17a4e944] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@3c1e93a1]
+2021-05-28 00:19:41.992 DEBUG 2352 --- [restartedMain] o.h.boot.internal.BootstrapContextImpl   : Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@63a2513a]
+2021-05-28 00:19:41.992 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@63a2513a]
+2021-05-28 00:19:42.001 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2021-05-28 00:19:42.001 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2021-05-28 00:19:42.002 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2021-05-28 00:19:42.002 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2021-05-28 00:19:42.002 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2021-05-28 00:19:42.003 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2021-05-28 00:19:42.004 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2021-05-28 00:19:42.005 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-05-28 00:19:42.007 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2021-05-28 00:19:42.007 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2021-05-28 00:19:42.008 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2021-05-28 00:19:42.008 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2021-05-28 00:19:42.009 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-05-28 00:19:42.010 DEBUG 2352 --- [restartedMain] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2021-05-28 00:19:42.015  INFO 2352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : ResilirePool - Starting...
+2021-05-28 00:19:42.019  WARN 2352 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-28 00:19:42.395  INFO 2352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : ResilirePool - Start completed.
+2021-05-28 00:19:42.400 DEBUG 2352 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Database ->
+       name : MySQL
+    version : 8.0.23
+      major : 8
+      minor : 0
+2021-05-28 00:19:42.400 DEBUG 2352 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.23 (Revision: 18bbd5e68195d0da083cbd5bd0d05d76320df7cd)
+      major : 8
+      minor : 0
+2021-05-28 00:19:42.400 DEBUG 2352 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : JDBC version : 4.2
+2021-05-28 00:19:42.409  INFO 2352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-28 00:19:42.420 DEBUG 2352 --- [restartedMain] o.h.e.j.env.spi.IdentifierHelperBuilder  : JDBC driver metadata reported database stores quoted identifiers in more than one case
+2021-05-28 00:19:42.435 DEBUG 2352 --- [restartedMain] o.h.e.j.env.spi.IdentifierHelperBuilder  : IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2021-05-28 00:19:42.462 DEBUG 2352 --- [restartedMain] o.h.boot.model.relational.Namespace      : Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2021-05-28 00:19:42.465 DEBUG 2352 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@57606c15] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@67500284]
+2021-05-28 00:19:42.500 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : Binding entity from annotated class: br.com.resilire.model.Consulta
+2021-05-28 00:19:42.512 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-05-28 00:19:42.516 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Import with entity name Consulta
+2021-05-28 00:19:42.520 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Bind entity br.com.resilire.model.Consulta on table consulta
+2021-05-28 00:19:42.533 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_consulta, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.535 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Consulta] is safe
+2021-05-28 00:19:42.535 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Consulta
+2021-05-28 00:19:42.535 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idConsulta with lazy=false
+2021-05-28 00:19:42.536 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idConsulta]
+2021-05-28 00:19:42.538 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idConsulta
+2021-05-28 00:19:42.539 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idConsulta
+2021-05-28 00:19:42.542 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.BinderHelper           : #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_consulta)]), idConsulta, identity, , ...)
+2021-05-28 00:19:42.542 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=data_consulta, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.542 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property dataConsulta with lazy=false
+2021-05-28 00:19:42.542 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:dataConsulta]
+2021-05-28 00:19:42.542 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for dataConsulta
+2021-05-28 00:19:42.542 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property dataConsulta
+2021-05-28 00:19:42.542 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_paciente, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idPaciente with lazy=false
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idPaciente]
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idPaciente
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idPaciente
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_prontuario, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idProntuario with lazy=false
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idProntuario]
+2021-05-28 00:19:42.543 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idProntuario
+2021-05-28 00:19:42.544 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idProntuario
+2021-05-28 00:19:42.544 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_psicologo, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.544 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idPsicologo with lazy=false
+2021-05-28 00:19:42.544 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idPsicologo]
+2021-05-28 00:19:42.544 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idPsicologo
+2021-05-28 00:19:42.544 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idPsicologo
+2021-05-28 00:19:42.545 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : Binding entity from annotated class: br.com.resilire.model.Endereco
+2021-05-28 00:19:42.546 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-05-28 00:19:42.546 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Import with entity name Endereco
+2021-05-28 00:19:42.546 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Bind entity br.com.resilire.model.Endereco on table endereco
+2021-05-28 00:19:42.548 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=id_endereco, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.549 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Endereco] is safe
+2021-05-28 00:19:42.549 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Endereco
+2021-05-28 00:19:42.549 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idEndereco with lazy=false
+2021-05-28 00:19:42.549 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:idEndereco]
+2021-05-28 00:19:42.550 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idEndereco
+2021-05-28 00:19:42.550 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idEndereco
+2021-05-28 00:19:42.550 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.BinderHelper           : #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_endereco)]), idEndereco, identity, , ...)
+2021-05-28 00:19:42.550 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=bairro, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.551 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property bairro with lazy=false
+2021-05-28 00:19:42.551 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:bairro]
+2021-05-28 00:19:42.551 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for bairro
+2021-05-28 00:19:42.551 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property bairro
+2021-05-28 00:19:42.551 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=cep, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.551 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property cep with lazy=false
+2021-05-28 00:19:42.551 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:cep]
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for cep
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property cep
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=cidade, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property cidade with lazy=false
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:cidade]
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for cidade
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property cidade
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=complemento, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.552 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property complemento with lazy=false
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:complemento]
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for complemento
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property complemento
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=numero, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property numero with lazy=false
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:numero]
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for numero
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property numero
+2021-05-28 00:19:42.553 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=rua, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.554 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property rua with lazy=false
+2021-05-28 00:19:42.554 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:rua]
+2021-05-28 00:19:42.554 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for rua
+2021-05-28 00:19:42.554 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property rua
+2021-05-28 00:19:42.554 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=uf, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.554 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property uf with lazy=false
+2021-05-28 00:19:42.554 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:uf]
+2021-05-28 00:19:42.555 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for uf
+2021-05-28 00:19:42.555 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property uf
+2021-05-28 00:19:42.555 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : Binding entity from annotated class: br.com.resilire.model.Paciente
+2021-05-28 00:19:42.555 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-05-28 00:19:42.555 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Import with entity name Paciente
+2021-05-28 00:19:42.555 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Bind entity br.com.resilire.model.Paciente on table paciente
+2021-05-28 00:19:42.556 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=id_paciente, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Paciente] is safe
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Paciente
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idPaciente with lazy=false
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:idPaciente]
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idPaciente
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idPaciente
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.BinderHelper           : #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_paciente)]), idPaciente, identity, , ...)
+2021-05-28 00:19:42.557 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=cpf, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.558 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property cpf with lazy=false
+2021-05-28 00:19:42.558 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:cpf]
+2021-05-28 00:19:42.558 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for cpf
+2021-05-28 00:19:42.558 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property cpf
+2021-05-28 00:19:42.558 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=email, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.559 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property email with lazy=false
+2021-05-28 00:19:42.559 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:email]
+2021-05-28 00:19:42.559 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for email
+2021-05-28 00:19:42.559 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property email
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=id_endereco, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idEndereco with lazy=false
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:idEndereco]
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idEndereco
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idEndereco
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property nome with lazy=false
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:nome]
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for nome
+2021-05-28 00:19:42.560 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property nome
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=sexo, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property sexo with lazy=false
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:sexo]
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for sexo
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property sexo
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=sobrenome, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property sobrenome with lazy=false
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:sobrenome]
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for sobrenome
+2021-05-28 00:19:42.561 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property sobrenome
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=telefone, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property telefone with lazy=false
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:telefone]
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for telefone
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property telefone
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : Binding entity from annotated class: br.com.resilire.model.Prontuario
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Import with entity name Prontuario
+2021-05-28 00:19:42.562 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Bind entity br.com.resilire.model.Prontuario on table prontuario
+2021-05-28 00:19:42.563 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=id_prontuario, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.563 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Prontuario] is safe
+2021-05-28 00:19:42.563 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Prontuario
+2021-05-28 00:19:42.563 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idProntuario with lazy=false
+2021-05-28 00:19:42.563 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:idProntuario]
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idProntuario
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idProntuario
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.BinderHelper           : #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_prontuario)]), idProntuario, identity, , ...)
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=id_paciente, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idPaciente with lazy=false
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:idPaciente]
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idPaciente
+2021-05-28 00:19:42.564 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idPaciente
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=observacao, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property observacao with lazy=false
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:observacao]
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for observacao
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property observacao
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=prescricao, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property prescricao with lazy=false
+2021-05-28 00:19:42.565 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:prescricao]
+2021-05-28 00:19:42.566 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for prescricao
+2021-05-28 00:19:42.566 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property prescricao
+2021-05-28 00:19:42.566 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : Binding entity from annotated class: br.com.resilire.model.Psicologo
+2021-05-28 00:19:42.566 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-05-28 00:19:42.566 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Import with entity name Psicologo
+2021-05-28 00:19:42.567 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.EntityBinder         : Bind entity br.com.resilire.model.Psicologo on table psicologo
+2021-05-28 00:19:42.568 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=id_psicologo, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.568 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Psicologo] is safe
+2021-05-28 00:19:42.568 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Psicologo
+2021-05-28 00:19:42.568 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idPsicologo with lazy=false
+2021-05-28 00:19:42.568 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:idPsicologo]
+2021-05-28 00:19:42.568 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idPsicologo
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idPsicologo
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.BinderHelper           : #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_psicologo)]), idPsicologo, identity, , ...)
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=crp, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property crp with lazy=false
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:crp]
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for crp
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property crp
+2021-05-28 00:19:42.569 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=email, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property email with lazy=false
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:email]
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for email
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property email
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=especialidade, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property especialidade with lazy=false
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:especialidade]
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for especialidade
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property especialidade
+2021-05-28 00:19:42.570 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=id_endereco, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property idEndereco with lazy=false
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:idEndereco]
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for idEndereco
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property idEndereco
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property nome with lazy=false
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:nome]
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for nome
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property nome
+2021-05-28 00:19:42.571 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=sobrenome, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.572 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property sobrenome with lazy=false
+2021-05-28 00:19:42.572 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:sobrenome]
+2021-05-28 00:19:42.572 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for sobrenome
+2021-05-28 00:19:42.572 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property sobrenome
+2021-05-28 00:19:42.572 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=telefone, insertable=true, updatable=true, unique=false}
+2021-05-28 00:19:42.572 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property telefone with lazy=false
+2021-05-28 00:19:42.572 DEBUG 2352 --- [restartedMain] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:telefone]
+2021-05-28 00:19:42.573 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for telefone
+2021-05-28 00:19:42.573 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.PropertyBinder       : Building property telefone
+2021-05-28 00:19:42.575 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idConsulta
+2021-05-28 00:19:42.575 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for dataConsulta
+2021-05-28 00:19:42.575 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idPaciente
+2021-05-28 00:19:42.575 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idProntuario
+2021-05-28 00:19:42.575 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idPsicologo
+2021-05-28 00:19:42.576 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idEndereco
+2021-05-28 00:19:42.576 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for bairro
+2021-05-28 00:19:42.576 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for cep
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for cidade
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for complemento
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for numero
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for rua
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for uf
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idPaciente
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for cpf
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for email
+2021-05-28 00:19:42.577 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idEndereco
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for nome
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for sexo
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for sobrenome
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for telefone
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idProntuario
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idPaciente
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for observacao
+2021-05-28 00:19:42.578 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for prescricao
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idPsicologo
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for crp
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for email
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for especialidade
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for idEndereco
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for nome
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for sobrenome
+2021-05-28 00:19:42.579 DEBUG 2352 --- [restartedMain] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for telefone
+2021-05-28 00:19:42.580 DEBUG 2352 --- [restartedMain] org.hibernate.mapping.PrimaryKey         : Forcing column [id_consulta] to be non-null as it is part of the primary key for table [consulta]
+2021-05-28 00:19:42.581 DEBUG 2352 --- [restartedMain] org.hibernate.mapping.PrimaryKey         : Forcing column [id_endereco] to be non-null as it is part of the primary key for table [endereco]
+2021-05-28 00:19:42.581 DEBUG 2352 --- [restartedMain] org.hibernate.mapping.PrimaryKey         : Forcing column [id_paciente] to be non-null as it is part of the primary key for table [paciente]
+2021-05-28 00:19:42.581 DEBUG 2352 --- [restartedMain] org.hibernate.mapping.PrimaryKey         : Forcing column [id_prontuario] to be non-null as it is part of the primary key for table [prontuario]
+2021-05-28 00:19:42.581 DEBUG 2352 --- [restartedMain] org.hibernate.mapping.PrimaryKey         : Forcing column [id_psicologo] to be non-null as it is part of the primary key for table [psicologo]
+2021-05-28 00:19:42.611 DEBUG 2352 --- [restartedMain] o.hibernate.internal.SessionFactoryImpl  : Building session factory
+2021-05-28 00:19:42.611 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : SessionFactory name : null
+2021-05-28 00:19:42.611 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Automatic flush during beforeCompletion(): enabled
+2021-05-28 00:19:42.611 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Automatic session close at end of transaction: disabled
+2021-05-28 00:19:42.611 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Statistics: disabled
+2021-05-28 00:19:42.611 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Deleted entity synthetic identifier rollback: disabled
+2021-05-28 00:19:42.611 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Default entity-mode: pojo
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Allow initialization of lazy state outside session : disabled
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Using BatchFetchStyle : LEGACY
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Default batch fetch size: -1
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Maximum outer join fetch depth: 2
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Default null ordering: NONE
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Order SQL updates by primary key: disabled
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Order SQL inserts for batching: disabled
+2021-05-28 00:19:42.612 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : multi-tenancy strategy : NONE
+2021-05-28 00:19:42.613 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JTA Track by Thread: enabled
+2021-05-28 00:19:42.613 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Query language substitutions: {}
+2021-05-28 00:19:42.613 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Named query checking : enabled
+2021-05-28 00:19:42.613 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Second-level cache: disabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Second-level query cache: disabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Second-level query cache factory: null
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Second-level cache region prefix: null
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Optimize second-level cache for minimal puts: disabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Structured second-level cache entries: disabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Second-level cache direct-reference entries: disabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Automatic eviction of collection cache: disabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JDBC batch size: 15
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JDBC batch updates for versioned data: enabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Scrollable result sets: enabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Wrap result sets: disabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JDBC3 getGeneratedKeys(): enabled
+2021-05-28 00:19:42.614 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JDBC result set fetch size: null
+2021-05-28 00:19:42.615 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Connection release mode: ON_CLOSE
+2021-05-28 00:19:42.615 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : Generate SQL with comments: disabled
+2021-05-28 00:19:42.615 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JPA compliance - query : disabled
+2021-05-28 00:19:42.615 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JPA compliance - closed-handling : disabled
+2021-05-28 00:19:42.615 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JPA compliance - lists : disabled
+2021-05-28 00:19:42.615 DEBUG 2352 --- [restartedMain] org.hibernate.cfg.Settings               : JPA compliance - transactions : disabled
+2021-05-28 00:19:42.661 DEBUG 2352 --- [restartedMain] o.hibernate.internal.SessionFactoryImpl  : Session factory constructed with filter configurations : {}
+2021-05-28 00:19:42.661 DEBUG 2352 --- [restartedMain] o.hibernate.internal.SessionFactoryImpl  : Instantiating session factory with properties: {hibernate.id.new_generator_mappings=true, java.specification.version=15, sun.cpu.isalist=amd64, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@5d2b36b7, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.MySQL8Dialect, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=C:\Users\mayara.barranco\Downloads\resilire\target\classes;C:\Users\mayara.barranco\.m2\repository\org\springframework\data\spring-data-jpa\2.4.2\spring-data-jpa-2.4.2.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\data\spring-data-commons\2.4.8\spring-data-commons-2.4.8.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-orm\5.3.6\spring-orm-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-jdbc\5.3.6\spring-jdbc-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-context\5.3.6\spring-context-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-expression\5.3.6\spring-expression-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-aop\5.3.6\spring-aop-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-tx\5.3.6\spring-tx-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-beans\5.3.6\spring-beans-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-core\5.3.6\spring-core-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-jcl\5.3.6\spring-jcl-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\aspectj\aspectjrt\1.9.6\aspectjrt-1.9.6.jar;C:\Users\mayara.barranco\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.4.5\spring-boot-starter-data-jpa-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.4.5\spring-boot-starter-aop-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.4.5\spring-boot-starter-jdbc-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\mayara.barranco\.m2\repository\org\hibernate\hibernate-core\5.4.30.Final\hibernate-core-5.4.30.Final.jar;C:\Users\mayara.barranco\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\mayara.barranco\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\mayara.barranco\.m2\repository\net\bytebuddy\byte-buddy\1.10.22\byte-buddy-1.10.22.jar;C:\Users\mayara.barranco\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\mayara.barranco\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\mayara.barranco\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\mayara.barranco\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\mayara.barranco\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.4\jaxb-runtime-2.3.4.jar;C:\Users\mayara.barranco\.m2\repository\org\glassfish\jaxb\txw2\2.3.4\txw2-2.3.4.jar;C:\Users\mayara.barranco\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\mayara.barranco\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-aspects\5.3.6\spring-aspects-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.4.5\spring-boot-starter-web-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter\2.4.5\spring-boot-starter-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.4.5\spring-boot-starter-logging-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\mayara.barranco\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\mayara.barranco\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\mayara.barranco\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\mayara.barranco\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\mayara.barranco\.m2\repository\org\yaml\snakeyaml\1.27\snakeyaml-1.27.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.4.5\spring-boot-starter-json-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.4\jackson-datatype-jdk8-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.4\jackson-module-parameter-names-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.4.5\spring-boot-starter-tomcat-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.45\tomcat-embed-core-9.0.45.jar;C:\Users\mayara.barranco\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\mayara.barranco\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.45\tomcat-embed-websocket-9.0.45.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-web\5.3.6\spring-web-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-webmvc\5.3.6\spring-webmvc-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-devtools\2.4.5\spring-boot-devtools-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot\2.4.5\spring-boot-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.4.5\spring-boot-autoconfigure-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\mysql\mysql-connector-java\8.0.23\mysql-connector-java-8.0.23.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\mayara.barranco\.m2\repository\io\springfox\springfox-swagger2\2.7.0\springfox-swagger2-2.7.0.jar;C:\Users\mayara.barranco\.m2\repository\io\swagger\swagger-annotations\1.5.13\swagger-annotations-1.5.13.jar;C:\Users\mayara.barranco\.m2\repository\io\swagger\swagger-models\1.5.13\swagger-models-1.5.13.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\io\springfox\springfox-spi\2.7.0\springfox-spi-2.7.0.jar;C:\Users\mayara.barranco\.m2\repository\io\springfox\springfox-core\2.7.0\springfox-core-2.7.0.jar;C:\Users\mayara.barranco\.m2\repository\io\springfox\springfox-schema\2.7.0\springfox-schema-2.7.0.jar;C:\Users\mayara.barranco\.m2\repository\io\springfox\springfox-swagger-common\2.7.0\springfox-swagger-common-2.7.0.jar;C:\Users\mayara.barranco\.m2\repository\io\springfox\springfox-spring-web\2.7.0\springfox-spring-web-2.7.0.jar;C:\Users\mayara.barranco\.m2\repository\org\reflections\reflections\0.9.11\reflections-0.9.11.jar;C:\Users\mayara.barranco\.m2\repository\com\google\guava\guava\18.0\guava-18.0.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;C:\Users\mayara.barranco\.m2\repository\org\mapstruct\mapstruct\1.1.0.Final\mapstruct-1.1.0.Final.jar;C:\Users\mayara.barranco\.m2\repository\io\springfox\springfox-swagger-ui\2.7.0\springfox-swagger-ui-2.7.0.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=https://java.oracle.com/, catalina.useNaming=false, user.timezone=America/Sao_Paulo, java.vm.specification.version=15, os.name=Windows 10, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=BR, sun.boot.library.path=C:\Users\mayara.barranco\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin, sun.java.command=br.com.resilire.ResilireApplication, javax.persistence.nonJtaDataSource=HikariDataSource (ResilirePool), hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@6a0dca7e, javax.persistence.sharedCache.mode=UNSPECIFIED, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\mayara.barranco, user.language=pt, java.specification.vendor=Oracle Corporation, java.version.date=2021-01-19, java.home=C:\Users\mayara.barranco\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, FILE_LOG_CHARSET=UTF-8, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.headless=true, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=15.0.2+7-27, user.name=mayara.barranco, path.separator=;, os.version=10.0, java.runtime.name=OpenJDK Runtime Environment, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=default, spring.beaninfo.ignore=true, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, LOG_FILE=ResilireLogFile.log, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\MAYARA~1.BAR\AppData\Local\Temp\, catalina.home=C:\Users\mayara.barranco\AppData\Local\Temp\tomcat.8080.2619761615870895601, java.version=15.0.2, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, user.dir=C:\Users\mayara.barranco\Downloads\resilire, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, PID=2352, sun.os.patch.level=, CONSOLE_LOG_CHARSET=UTF-8, catalina.base=C:\Users\mayara.barranco\AppData\Local\Temp\tomcat.8080.2619761615870895601, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@5c14183b, java.library.path=C:\Users\mayara.barranco\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/mayara.barranco/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/mayara.barranco/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\AdoptOpenJDK\jre-8.0.265.01-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\mayara.barranco\AppData\Local\Microsoft\WindowsApps;;C:\Users\mayara.barranco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mayara.barranco\AppData\Roaming\npm;C:\Program Files\Salesforce CLI\bin;C:\Users\mayara.barranco\OneDrive - COMPASSO TECNOLOGIA LTDA\Área de Trabalho;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=15.0.2+7-27, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.archive.scanner=org.hibernate.boot.archive.scan.internal.DisabledScanner, hibernate.connection.datasource=HikariDataSource (ResilirePool), java.class.version=59.0}
+2021-05-28 00:19:42.672 DEBUG 2352 --- [restartedMain] org.hibernate.secure.spi.JaccIntegrator  : Skipping JACC integration as it was not enabled
+2021-05-28 00:19:42.673 DEBUG 2352 --- [restartedMain] o.hibernate.internal.SessionFactoryImpl  : Instantiated session factory
+2021-05-28 00:19:42.674 DEBUG 2352 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@57606c15] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@658aa80a]
+2021-05-28 00:19:42.714 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Prontuario] is safe
+2021-05-28 00:19:42.714 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Prontuario
+2021-05-28 00:19:42.897 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Consulta] is safe
+2021-05-28 00:19:42.897 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Consulta
+2021-05-28 00:19:42.898  INFO 2352 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.resilire.model.Consulta (class must be instantiated by Interceptor)
+2021-05-28 00:19:42.908 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Endereco] is safe
+2021-05-28 00:19:42.908 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Endereco
+2021-05-28 00:19:42.921 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Psicologo] is safe
+2021-05-28 00:19:42.921 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Psicologo
+2021-05-28 00:19:42.934 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [br.com.resilire.model.Paciente] is safe
+2021-05-28 00:19:42.934 DEBUG 2352 --- [restartedMain] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Paciente
+2021-05-28 00:19:42.950 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: br.com.resilire.model.Prontuario
+2021-05-28 00:19:42.951 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Version select: select id_prontuario from prontuario where id_prontuario =?
+2021-05-28 00:19:42.951 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Snapshot select: select prontuario_.id_prontuario, prontuario_.id_paciente as id_pacie2_3_, prontuario_.observacao as observac3_3_, prontuario_.prescricao as prescric4_3_ from prontuario prontuario_ where prontuario_.id_prontuario=?
+2021-05-28 00:19:42.951 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Insert 0: insert into prontuario (id_paciente, observacao, prescricao, id_prontuario) values (?, ?, ?, ?)
+2021-05-28 00:19:42.951 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Update 0: update prontuario set id_paciente=?, observacao=?, prescricao=? where id_prontuario=?
+2021-05-28 00:19:42.951 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Delete 0: delete from prontuario where id_prontuario=?
+2021-05-28 00:19:42.951 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Identity insert: insert into prontuario (id_paciente, observacao, prescricao) values (?, ?, ?)
+2021-05-28 00:19:42.976 DEBUG 2352 --- [restartedMain] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@449e1239]
+2021-05-28 00:19:42.977 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : idPaciente
+2021-05-28 00:19:42.977 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : observacao
+2021-05-28 00:19:42.977 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : prescricao
+2021-05-28 00:19:42.977 DEBUG 2352 --- [restartedMain] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2021-05-28 00:19:42.985 DEBUG 2352 --- [restartedMain] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2021-05-28 00:19:42.988 DEBUG 2352 --- [restartedMain] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=br.com.resilire.model.Prontuario)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Prontuario, querySpaceUid=<gen:0>, path=br.com.resilire.model.Prontuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Prontuario)
+          - SQL table alias mapping - prontuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_pront1_3_0_}
+
+2021-05-28 00:19:42.990 DEBUG 2352 --- [restartedMain] o.h.loader.entity.plan.EntityLoader      : Static select for entity br.com.resilire.model.Prontuario [NONE]: select prontuario0_.id_prontuario as id_pront1_3_0_, prontuario0_.id_paciente as id_pacie2_3_0_, prontuario0_.observacao as observac3_3_0_, prontuario0_.prescricao as prescric4_3_0_ from prontuario prontuario0_ where prontuario0_.id_prontuario=?
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: br.com.resilire.model.Consulta
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Version select: select id_consulta from consulta where id_consulta =?
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Snapshot select: select consulta_.id_consulta, consulta_.data_consulta as data_con2_0_, consulta_.id_paciente as id_pacie3_0_, consulta_.id_prontuario as id_pront4_0_, consulta_.id_psicologo as id_psico5_0_ from consulta consulta_ where consulta_.id_consulta=?
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Insert 0: insert into consulta (data_consulta, id_paciente, id_prontuario, id_psicologo, id_consulta) values (?, ?, ?, ?, ?)
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Update 0: update consulta set data_consulta=?, id_paciente=?, id_prontuario=?, id_psicologo=? where id_consulta=?
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Delete 0: delete from consulta where id_consulta=?
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Identity insert: insert into consulta (data_consulta, id_paciente, id_prontuario, id_psicologo) values (?, ?, ?, ?)
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@cf5429a]
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : dataConsulta
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : idPaciente
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : idProntuario
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : idPsicologo
+2021-05-28 00:19:42.991 DEBUG 2352 --- [restartedMain] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2021-05-28 00:19:42.992 DEBUG 2352 --- [restartedMain] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2021-05-28 00:19:42.992 DEBUG 2352 --- [restartedMain] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=br.com.resilire.model.Consulta)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Consulta, querySpaceUid=<gen:0>, path=br.com.resilire.model.Consulta)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Consulta)
+          - SQL table alias mapping - consulta0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_consu1_0_0_}
+
+2021-05-28 00:19:42.992 DEBUG 2352 --- [restartedMain] o.h.loader.entity.plan.EntityLoader      : Static select for entity br.com.resilire.model.Consulta [NONE]: select consulta0_.id_consulta as id_consu1_0_0_, consulta0_.data_consulta as data_con2_0_0_, consulta0_.id_paciente as id_pacie3_0_0_, consulta0_.id_prontuario as id_pront4_0_0_, consulta0_.id_psicologo as id_psico5_0_0_ from consulta consulta0_ where consulta0_.id_consulta=?
+2021-05-28 00:19:42.992 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: br.com.resilire.model.Endereco
+2021-05-28 00:19:42.992 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Version select: select id_endereco from endereco where id_endereco =?
+2021-05-28 00:19:42.992 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Snapshot select: select endereco_.id_endereco, endereco_.bairro as bairro2_1_, endereco_.cep as cep3_1_, endereco_.cidade as cidade4_1_, endereco_.complemento as compleme5_1_, endereco_.numero as numero6_1_, endereco_.rua as rua7_1_, endereco_.uf as uf8_1_ from endereco endereco_ where endereco_.id_endereco=?
+2021-05-28 00:19:42.992 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Insert 0: insert into endereco (bairro, cep, cidade, complemento, numero, rua, uf, id_endereco) values (?, ?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Update 0: update endereco set bairro=?, cep=?, cidade=?, complemento=?, numero=?, rua=?, uf=? where id_endereco=?
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Delete 0: delete from endereco where id_endereco=?
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Identity insert: insert into endereco (bairro, cep, cidade, complemento, numero, rua, uf) values (?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4b53e78c]
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : bairro
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : cep
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : cidade
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : complemento
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : numero
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : rua
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : uf
+2021-05-28 00:19:42.993 DEBUG 2352 --- [restartedMain] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=br.com.resilire.model.Endereco)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Endereco, querySpaceUid=<gen:0>, path=br.com.resilire.model.Endereco)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Endereco)
+          - SQL table alias mapping - endereco0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_ender1_1_0_}
+
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] o.h.loader.entity.plan.EntityLoader      : Static select for entity br.com.resilire.model.Endereco [NONE]: select endereco0_.id_endereco as id_ender1_1_0_, endereco0_.bairro as bairro2_1_0_, endereco0_.cep as cep3_1_0_, endereco0_.cidade as cidade4_1_0_, endereco0_.complemento as compleme5_1_0_, endereco0_.numero as numero6_1_0_, endereco0_.rua as rua7_1_0_, endereco0_.uf as uf8_1_0_ from endereco endereco0_ where endereco0_.id_endereco=?
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: br.com.resilire.model.Psicologo
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Version select: select id_psicologo from psicologo where id_psicologo =?
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Snapshot select: select psicologo_.id_psicologo, psicologo_.crp as crp2_4_, psicologo_.email as email3_4_, psicologo_.especialidade as especial4_4_, psicologo_.id_endereco as id_ender5_4_, psicologo_.nome as nome6_4_, psicologo_.sobrenome as sobrenom7_4_, psicologo_.telefone as telefone8_4_ from psicologo psicologo_ where psicologo_.id_psicologo=?
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Insert 0: insert into psicologo (crp, email, especialidade, id_endereco, nome, sobrenome, telefone, id_psicologo) values (?, ?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:19:42.994 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Update 0: update psicologo set crp=?, email=?, especialidade=?, id_endereco=?, nome=?, sobrenome=?, telefone=? where id_psicologo=?
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Delete 0: delete from psicologo where id_psicologo=?
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Identity insert: insert into psicologo (crp, email, especialidade, id_endereco, nome, sobrenome, telefone) values (?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@699b047]
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : crp
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : especialidade
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : idEndereco
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : nome
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : sobrenome
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : telefone
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2021-05-28 00:19:42.995 DEBUG 2352 --- [restartedMain] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=br.com.resilire.model.Psicologo)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Psicologo, querySpaceUid=<gen:0>, path=br.com.resilire.model.Psicologo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Psicologo)
+          - SQL table alias mapping - psicologo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_psico1_4_0_}
+
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.loader.entity.plan.EntityLoader      : Static select for entity br.com.resilire.model.Psicologo [NONE]: select psicologo0_.id_psicologo as id_psico1_4_0_, psicologo0_.crp as crp2_4_0_, psicologo0_.email as email3_4_0_, psicologo0_.especialidade as especial4_4_0_, psicologo0_.id_endereco as id_ender5_4_0_, psicologo0_.nome as nome6_4_0_, psicologo0_.sobrenome as sobrenom7_4_0_, psicologo0_.telefone as telefone8_4_0_ from psicologo psicologo0_ where psicologo0_.id_psicologo=?
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: br.com.resilire.model.Paciente
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Version select: select id_paciente from paciente where id_paciente =?
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Snapshot select: select paciente_.id_paciente, paciente_.cpf as cpf2_2_, paciente_.email as email3_2_, paciente_.id_endereco as id_ender4_2_, paciente_.nome as nome5_2_, paciente_.sexo as sexo6_2_, paciente_.sobrenome as sobrenom7_2_, paciente_.telefone as telefone8_2_ from paciente paciente_ where paciente_.id_paciente=?
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Insert 0: insert into paciente (cpf, email, id_endereco, nome, sexo, sobrenome, telefone, id_paciente) values (?, ?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Update 0: update paciente set cpf=?, email=?, id_endereco=?, nome=?, sexo=?, sobrenome=?, telefone=? where id_paciente=?
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Delete 0: delete from paciente where id_paciente=?
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.entity.AbstractEntityPersister     :  Identity insert: insert into paciente (cpf, email, id_endereco, nome, sexo, sobrenome, telefone) values (?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@46bb5fb5]
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : cpf
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : idEndereco
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : nome
+2021-05-28 00:19:42.996 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : sexo
+2021-05-28 00:19:42.997 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : sobrenome
+2021-05-28 00:19:42.997 DEBUG 2352 --- [restartedMain] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : telefone
+2021-05-28 00:19:42.997 DEBUG 2352 --- [restartedMain] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2021-05-28 00:19:42.997 DEBUG 2352 --- [restartedMain] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2021-05-28 00:19:42.997 DEBUG 2352 --- [restartedMain] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=br.com.resilire.model.Paciente)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Paciente, querySpaceUid=<gen:0>, path=br.com.resilire.model.Paciente)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Paciente)
+          - SQL table alias mapping - paciente0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_pacie1_2_0_}
+
+2021-05-28 00:19:42.997 DEBUG 2352 --- [restartedMain] o.h.loader.entity.plan.EntityLoader      : Static select for entity br.com.resilire.model.Paciente [NONE]: select paciente0_.id_paciente as id_pacie1_2_0_, paciente0_.cpf as cpf2_2_0_, paciente0_.email as email3_2_0_, paciente0_.id_endereco as id_ender4_2_0_, paciente0_.nome as nome5_2_0_, paciente0_.sexo as sexo6_2_0_, paciente0_.sobrenome as sobrenom7_2_0_, paciente0_.telefone as telefone8_2_0_ from paciente paciente0_ where paciente0_.id_paciente=?
+2021-05-28 00:19:43.017 DEBUG 2352 --- [restartedMain] .h.t.s.s.SchemaManagementToolCoordinator : No actions specified; doing nothing
+2021-05-28 00:19:43.018  INFO 2352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-28 00:19:43.018 DEBUG 2352 --- [restartedMain] o.h.query.spi.NamedQueryRepository       : Checking 0 named HQL queries
+2021-05-28 00:19:43.018 DEBUG 2352 --- [restartedMain] o.h.query.spi.NamedQueryRepository       : Checking 0 named SQL queries
+2021-05-28 00:19:43.027 DEBUG 2352 --- [restartedMain] o.h.internal.SessionFactoryRegistry      : Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@b0f9467
+2021-05-28 00:19:43.027 DEBUG 2352 --- [restartedMain] o.h.internal.SessionFactoryRegistry      : Registering SessionFactory: c25dd45b-522b-4909-9f2b-1a5b7425ec43 (<unnamed>)
+2021-05-28 00:19:43.027 DEBUG 2352 --- [restartedMain] o.h.internal.SessionFactoryRegistry      : Not binding SessionFactory to JNDI, no JNDI name configured
+2021-05-28 00:19:43.028  INFO 2352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-28 00:19:43.186 DEBUG 2352 --- [restartedMain] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=false]
+2021-05-28 00:19:43.588  WARN 2352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-28 00:19:43.671 DEBUG 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2021-05-28 00:19:43.742  INFO 2352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-28 00:19:43.842  INFO 2352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-28 00:19:43.865  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-28 00:19:43.870 DEBUG 2352 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-05-28 00:19:43.938 DEBUG 2352 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-05-28 00:19:43.949 DEBUG 2352 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-05-28 00:19:44.132  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-28 00:19:44.133  INFO 2352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-28 00:19:44.149  INFO 2352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-28 00:19:44.202  INFO 2352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-28 00:19:44.423  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: atualizarUsingPUT_1
+2021-05-28 00:19:44.428  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: cadastrarUsingPOST_1
+2021-05-28 00:19:44.434  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2021-05-28 00:19:44.444  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_1
+2021-05-28 00:19:44.460  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: atualizarUsingPUT_2
+2021-05-28 00:19:44.465  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: cadastrarUsingPOST_2
+2021-05-28 00:19:44.469  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2021-05-28 00:19:44.475  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
+2021-05-28 00:19:44.480  INFO 2352 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_2
+2021-05-28 00:19:44.497  INFO 2352 --- [restartedMain] br.com.resilire.ResilireApplication      : Started ResilireApplication in 5.433 seconds (JVM running for 5.98)
+2021-05-28 00:19:48.131  INFO 2352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-28 00:19:48.132  INFO 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-28 00:19:48.132 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-05-28 00:19:48.133 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-05-28 00:19:48.133 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-05-28 00:19:48.135 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6add093e
+2021-05-28 00:19:48.136 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5bac7cb2
+2021-05-28 00:19:48.136 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-05-28 00:19:48.136  INFO 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-05-28 00:19:48.159 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui.html", parameters={}
+2021-05-28 00:19:48.179 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-05-28 00:19:48.224 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.250 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/css/reset.css", parameters={}
+2021-05-28 00:19:48.252 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/css/typography.css", parameters={}
+2021-05-28 00:19:48.252 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.254 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.255 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2021-05-28 00:19:48.257 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.257 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/css/screen.css", parameters={}
+2021-05-28 00:19:48.257 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-05-28 00:19:48.257 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.258 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js", parameters={}
+2021-05-28 00:19:48.259 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js", parameters={}
+2021-05-28 00:19:48.263 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.265 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js", parameters={}
+2021-05-28 00:19:48.258 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js", parameters={}
+2021-05-28 00:19:48.265 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.267 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.267 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.267 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2021-05-28 00:19:48.270 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.273 DEBUG 2352 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2021-05-28 00:19:48.278 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.281 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.282 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js", parameters={}
+2021-05-28 00:19:48.283 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/lodash.min.js", parameters={}
+2021-05-28 00:19:48.283 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.284 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.286 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js", parameters={}
+2021-05-28 00:19:48.288 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.288 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.291 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/backbone-min.js", parameters={}
+2021-05-28 00:19:48.291 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.293 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.299 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.302 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.304 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/swagger-ui.min.js", parameters={}
+2021-05-28 00:19:48.304 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js", parameters={}
+2021-05-28 00:19:48.304 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js", parameters={}
+2021-05-28 00:19:48.305 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.305 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.305 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.308 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.309 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/jsoneditor.min.js", parameters={}
+2021-05-28 00:19:48.309 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.311 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.313 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.321 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.322 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/marked.js", parameters={}
+2021-05-28 00:19:48.323 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.329 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.331 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.337 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.339 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/lib/swagger-oauth.js", parameters={}
+2021-05-28 00:19:48.341 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.346 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.350 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/springfox.js", parameters={}
+2021-05-28 00:19:48.351 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.356 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.369 DEBUG 2352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/images/logo_small.png", parameters={}
+2021-05-28 00:19:48.370 DEBUG 2352 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.375 DEBUG 2352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.383 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/css/print.css", parameters={}
+2021-05-28 00:19:48.383 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.390 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.396 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.1', given [text/css, */*;q=0.1] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:19:48.398 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri May 28 00:19:48 BRT 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+2021-05-28 00:19:48.433 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2021-05-28 00:19:48.507 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources/configuration/ui", parameters={}
+2021-05-28 00:19:48.507 DEBUG 2352 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+2021-05-28 00:19:48.514 DEBUG 2352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/images/favicon-32x32.png", parameters={}
+2021-05-28 00:19:48.516 DEBUG 2352 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:19:48.518 DEBUG 2352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.533 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:19:48.533 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.swagger.web.UiConfiguration@6b4cb3ff]
+2021-05-28 00:19:48.535 DEBUG 2352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.539 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources", parameters={}
+2021-05-28 00:19:48.540 DEBUG 2352 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+2021-05-28 00:19:48.544 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:19:48.544 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[springfox.documentation.swagger.web.SwaggerResource@628a5385]]
+2021-05-28 00:19:48.547 DEBUG 2352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:48.553 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/v2/api-docs", parameters={}
+2021-05-28 00:19:48.821 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;charset=utf-8', given [application/json;charset=utf-8, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:19:48.821 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@de3224]
+2021-05-28 00:19:48.824 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:19:49.038 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources/configuration/security", parameters={}
+2021-05-28 00:19:49.039 DEBUG 2352 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+2021-05-28 00:19:49.042 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:19:49.042 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.swagger.web.SecurityConfiguration@76e2b184]
+2021-05-28 00:19:49.043 DEBUG 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:20:00.502 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/webjars/springfox-swagger-ui/images/throbber.gif", parameters={}
+2021-05-28 00:20:00.503 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/psicologo/", parameters={}
+2021-05-28 00:20:00.504 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+2021-05-28 00:20:00.504 DEBUG 2352 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.resilire.controller.PsicologoController#cadastrar(Psicologo)
+2021-05-28 00:20:00.507 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:20:00.576 DEBUG 2352 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [br.com.resilire.model.Psicologo@464b6cc0]
+2021-05-28 00:20:00.594 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2021-05-28 00:20:00.594 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.e.t.internal.TransactionImpl         : begin
+2021-05-28 00:20:00.638 DEBUG 2352 --- [http-nio-8080-exec-2] h.e.i.EntityCopyObserverFactoryInitiator : Configured EntityCopyObserver strategy: disallow
+2021-05-28 00:20:00.697 DEBUG 2352 --- [http-nio-8080-exec-2] org.hibernate.loader.Loader              : Static select for action ACTION_MERGE on entity br.com.resilire.model.Psicologo: select psicologo0_.id_psicologo as id_psico1_4_0_, psicologo0_.crp as crp2_4_0_, psicologo0_.email as email3_4_0_, psicologo0_.especialidade as especial4_4_0_, psicologo0_.id_endereco as id_ender5_4_0_, psicologo0_.nome as nome6_4_0_, psicologo0_.sobrenome as sobrenom7_4_0_, psicologo0_.telefone as telefone8_4_0_ from psicologo psicologo0_ where psicologo0_.id_psicologo=?
+2021-05-28 00:20:00.700 DEBUG 2352 --- [http-nio-8080-exec-2] org.hibernate.loader.Loader              : Loading entity: [br.com.resilire.model.Psicologo#0]
+2021-05-28 00:20:00.714 DEBUG 2352 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select psicologo0_.id_psicologo as id_psico1_4_0_, psicologo0_.crp as crp2_4_0_, psicologo0_.email as email3_4_0_, psicologo0_.especialidade as especial4_4_0_, psicologo0_.id_endereco as id_ender5_4_0_, psicologo0_.nome as nome6_4_0_, psicologo0_.sobrenome as sobrenom7_4_0_, psicologo0_.telefone as telefone8_4_0_ from psicologo psicologo0_ where psicologo0_.id_psicologo=?
+2021-05-28 00:20:00.763 DEBUG 2352 --- [http-nio-8080-exec-2] org.hibernate.loader.Loader              : Done entity load
+2021-05-28 00:20:00.784 DEBUG 2352 --- [http-nio-8080-exec-2] org.hibernate.engine.spi.ActionQueue     : Executing identity-insert immediately
+2021-05-28 00:20:00.787 DEBUG 2352 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into psicologo (crp, email, especialidade, id_endereco, nome, sobrenome, telefone) values (?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:20:00.799 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.id.IdentifierGeneratorHelper         : Natively generated identity: 1
+2021-05-28 00:20:00.799 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.r.j.i.ResourceRegistryStandardImpl   : HHH000387: ResultSet's statement was not registered
+2021-05-28 00:20:00.805 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.e.t.internal.TransactionImpl         : committing
+2021-05-28 00:20:00.807 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2021-05-28 00:20:00.809 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2021-05-28 00:20:00.816 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2021-05-28 00:20:00.817 DEBUG 2352 --- [http-nio-8080-exec-2] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2021-05-28 00:20:00.819 DEBUG 2352 --- [http-nio-8080-exec-2] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2021-05-28 00:20:00.819 DEBUG 2352 --- [http-nio-8080-exec-2] o.hibernate.internal.util.EntityPrinter  : br.com.resilire.model.Psicologo{crp=string, telefone=string, especialidade=string, idPsicologo=1, idEndereco=0, nome=string, sobrenome=string, email=string}
+2021-05-28 00:20:00.857 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:20:00.857 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [br.com.resilire.controller.dto.PsicologoDto@37e44a81]
+2021-05-28 00:20:00.858 DEBUG 2352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2021-05-28 00:20:10.954 DEBUG 2352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/psicologo/1", parameters={}
+2021-05-28 00:20:10.956 DEBUG 2352 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.resilire.controller.PsicologoController#findById(Long, Model)
+2021-05-28 00:20:10.963 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2021-05-28 00:20:10.963 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.e.t.internal.TransactionImpl         : begin
+2021-05-28 00:20:10.968 DEBUG 2352 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select psicologo0_.id_psicologo as id_psico1_4_0_, psicologo0_.crp as crp2_4_0_, psicologo0_.email as email3_4_0_, psicologo0_.especialidade as especial4_4_0_, psicologo0_.id_endereco as id_ender5_4_0_, psicologo0_.nome as nome6_4_0_, psicologo0_.sobrenome as sobrenom7_4_0_, psicologo0_.telefone as telefone8_4_0_ from psicologo psicologo0_ where psicologo0_.id_psicologo=?
+2021-05-28 00:20:10.975 DEBUG 2352 --- [http-nio-8080-exec-8] l.p.e.p.i.EntityReferenceInitializerImpl : On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2021-05-28 00:20:10.982 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:20:10.982 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `crp` : value = string
+2021-05-28 00:20:10.982 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`crp`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:10.982 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `email` : value = string
+2021-05-28 00:20:10.982 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`email`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:10.983 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `especialidade` : value = string
+2021-05-28 00:20:10.983 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`especialidade`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:10.983 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `idEndereco` : value = 0
+2021-05-28 00:20:10.983 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`idEndereco`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:10.983 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `nome` : value = string
+2021-05-28 00:20:10.983 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`nome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:10.983 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `sobrenome` : value = string
+2021-05-28 00:20:10.984 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`sobrenome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:10.984 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `telefone` : value = string
+2021-05-28 00:20:10.984 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`telefone`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:10.984 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:20:10.985 DEBUG 2352 --- [http-nio-8080-exec-8] .l.e.p.AbstractLoadPlanBasedEntityLoader : Done entity load : br.com.resilire.model.Psicologo#1
+2021-05-28 00:20:10.985 DEBUG 2352 --- [http-nio-8080-exec-8] o.h.e.t.internal.TransactionImpl         : committing
+2021-05-28 00:20:10.995 DEBUG 2352 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:20:10.996 DEBUG 2352 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[br.com.resilire.controller.dto.PsicologoDto@58aa91ca]]
+2021-05-28 00:20:10.997 DEBUG 2352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:20:32.791 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : PUT "/psicologo/1", parameters={}
+2021-05-28 00:20:32.792 DEBUG 2352 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.resilire.controller.PsicologoController#atualizar(Long, Psicologo)
+2021-05-28 00:20:32.795 DEBUG 2352 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [br.com.resilire.model.Psicologo@16fe1521]
+2021-05-28 00:20:32.796 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2021-05-28 00:20:32.796 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.e.t.internal.TransactionImpl         : begin
+2021-05-28 00:20:32.804 DEBUG 2352 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select psicologo0_.id_psicologo as id_psico1_4_0_, psicologo0_.crp as crp2_4_0_, psicologo0_.email as email3_4_0_, psicologo0_.especialidade as especial4_4_0_, psicologo0_.id_endereco as id_ender5_4_0_, psicologo0_.nome as nome6_4_0_, psicologo0_.sobrenome as sobrenom7_4_0_, psicologo0_.telefone as telefone8_4_0_ from psicologo psicologo0_ where psicologo0_.id_psicologo=?
+2021-05-28 00:20:32.809 DEBUG 2352 --- [http-nio-8080-exec-7] l.p.e.p.i.EntityReferenceInitializerImpl : On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2021-05-28 00:20:32.810 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:20:32.811 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `crp` : value = string
+2021-05-28 00:20:32.811 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Attribute (`crp`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:32.811 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `email` : value = string
+2021-05-28 00:20:32.811 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Attribute (`email`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:32.811 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `especialidade` : value = string
+2021-05-28 00:20:32.811 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Attribute (`especialidade`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:32.811 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `idEndereco` : value = 0
+2021-05-28 00:20:32.812 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Attribute (`idEndereco`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:32.812 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `nome` : value = string
+2021-05-28 00:20:32.812 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Attribute (`nome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:32.812 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `sobrenome` : value = string
+2021-05-28 00:20:32.813 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Attribute (`sobrenome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:32.813 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `telefone` : value = string
+2021-05-28 00:20:32.813 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Attribute (`telefone`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:32.814 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:20:32.814 DEBUG 2352 --- [http-nio-8080-exec-7] .l.e.p.AbstractLoadPlanBasedEntityLoader : Done entity load : br.com.resilire.model.Psicologo#1
+2021-05-28 00:20:32.815 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.e.t.internal.TransactionImpl         : committing
+2021-05-28 00:20:32.816 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2021-05-28 00:20:32.816 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2021-05-28 00:20:32.818 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+2021-05-28 00:20:32.819 DEBUG 2352 --- [http-nio-8080-exec-7] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2021-05-28 00:20:32.819 DEBUG 2352 --- [http-nio-8080-exec-7] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2021-05-28 00:20:32.819 DEBUG 2352 --- [http-nio-8080-exec-7] o.hibernate.internal.util.EntityPrinter  : br.com.resilire.model.Psicologo{crp=string2, telefone=string2, especialidade=string2, idPsicologo=1, idEndereco=0, nome=string2, sobrenome=string2, email=string2}
+2021-05-28 00:20:32.823 DEBUG 2352 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : update psicologo set crp=?, email=?, especialidade=?, id_endereco=?, nome=?, sobrenome=?, telefone=? where id_psicologo=?
+2021-05-28 00:20:32.857 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:20:32.857 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [br.com.resilire.controller.dto.PsicologoDto@26e642eb]
+2021-05-28 00:20:32.858 DEBUG 2352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:20:44.467 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/psicologo/", parameters={}
+2021-05-28 00:20:44.468 DEBUG 2352 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.resilire.controller.PsicologoController#findAll()
+2021-05-28 00:20:44.469 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2021-05-28 00:20:44.469 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.e.t.internal.TransactionImpl         : begin
+2021-05-28 00:20:44.509 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.q.c.internal.CriteriaQueryImpl       : Rendered criteria query -> select generatedAlias0 from Psicologo as generatedAlias0
+2021-05-28 00:20:44.531 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@3027b13
+2021-05-28 00:20:44.588 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.h.internal.ast.QueryTranslatorImpl   : parse() - HQL: select generatedAlias0 from br.com.resilire.model.Psicologo as generatedAlias0
+2021-05-28 00:20:44.598 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.ast.ErrorTracker        : throwQueryException() : no errors
+2021-05-28 00:20:44.611 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.h.internal.ast.QueryTranslatorImpl   : --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[DOT] Node: '.'
+       |     |  |  |  |  +-[IDENT] Node: 'br'
+       |     |  |  |  |  \-[IDENT] Node: 'com'
+       |     |  |  |  \-[IDENT] Node: 'resilire'
+       |     |  |  \-[IDENT] Node: 'model'
+       |     |  \-[IDENT] Node: 'Psicologo'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+2021-05-28 00:20:44.655 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.antlr.HqlSqlBaseWalker  : select << begin [level=1, statement=select]
+2021-05-28 00:20:44.682 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.ast.tree.FromElement    : FromClause{level=1} : br.com.resilire.model.Psicologo (generatedAlias0) -> psicologo0_
+2021-05-28 00:20:44.683 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.h.i.ast.tree.FromReferenceNode       : Resolved : generatedAlias0 -> psicologo0_.id_psicologo
+2021-05-28 00:20:44.686 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.antlr.HqlSqlBaseWalker  : select : finishing up [level=1, statement=select]
+2021-05-28 00:20:44.686 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.ast.HqlSqlWalker        : processQuery() :  ( SELECT ( {select clause} psicologo0_.id_psicologo ) ( FromClause{level=1} psicologo psicologo0_ ) )
+2021-05-28 00:20:44.699 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.ast.util.JoinProcessor  : Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Psicologo): [psicologo]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(br.com.resilire.model.Psicologo)
+    |  | originalText: generatedAlias0
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+2021-05-28 00:20:44.705 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.ast.util.JoinProcessor  : Using FROM fragment [psicologo psicologo0_]
+2021-05-28 00:20:44.706 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.antlr.HqlSqlBaseWalker  : select >> end [level=1, statement=select]
+2021-05-28 00:20:44.707 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.h.internal.ast.QueryTranslatorImpl   : --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (psicologo)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'psicologo0_.id_psicologo as id_psico1_4_' {alias=generatedAlias0, className=br.com.resilire.model.Psicologo, tableAlias=psicologo0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'psicologo0_.crp as crp2_4_, psicologo0_.email as email3_4_, psicologo0_.especialidade as especial4_4_, psicologo0_.id_endereco as id_ender5_4_, psicologo0_.nome as nome6_4_, psicologo0_.sobrenome as sobrenom7_4_, psicologo0_.telefone as telefone8_4_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[psicologo0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'psicologo psicologo0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=psicologo,tableAlias=psicologo0_,origin=null,columns={,className=br.com.resilire.model.Psicologo}}
+
+2021-05-28 00:20:44.707 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.ast.ErrorTracker        : throwQueryException() : no errors
+2021-05-28 00:20:44.719 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.h.internal.ast.QueryTranslatorImpl   : HQL: select generatedAlias0 from br.com.resilire.model.Psicologo as generatedAlias0
+2021-05-28 00:20:44.719 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.h.internal.ast.QueryTranslatorImpl   : SQL: select psicologo0_.id_psicologo as id_psico1_4_, psicologo0_.crp as crp2_4_, psicologo0_.email as email3_4_, psicologo0_.especialidade as especial4_4_, psicologo0_.id_endereco as id_ender5_4_, psicologo0_.nome as nome6_4_, psicologo0_.sobrenome as sobrenom7_4_, psicologo0_.telefone as telefone8_4_ from psicologo psicologo0_
+2021-05-28 00:20:44.719 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.hql.internal.ast.ErrorTracker        : throwQueryException() : no errors
+2021-05-28 00:20:44.740 DEBUG 2352 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select psicologo0_.id_psicologo as id_psico1_4_, psicologo0_.crp as crp2_4_, psicologo0_.email as email3_4_, psicologo0_.especialidade as especial4_4_, psicologo0_.id_endereco as id_ender5_4_, psicologo0_.nome as nome6_4_, psicologo0_.sobrenome as sobrenom7_4_, psicologo0_.telefone as telefone8_4_ from psicologo psicologo0_
+2021-05-28 00:20:44.746 DEBUG 2352 --- [http-nio-8080-exec-3] org.hibernate.loader.Loader              : Result set row: 0
+2021-05-28 00:20:44.747 DEBUG 2352 --- [http-nio-8080-exec-3] org.hibernate.loader.Loader              : Result row: EntityKey[br.com.resilire.model.Psicologo#1]
+2021-05-28 00:20:44.748 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:20:44.748 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `crp` : value = string2
+2021-05-28 00:20:44.748 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Attribute (`crp`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:44.748 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `email` : value = string2
+2021-05-28 00:20:44.749 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Attribute (`email`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:44.749 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `especialidade` : value = string2
+2021-05-28 00:20:44.749 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Attribute (`especialidade`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:44.749 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `idEndereco` : value = 0
+2021-05-28 00:20:44.749 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Attribute (`idEndereco`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:44.749 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `nome` : value = string2
+2021-05-28 00:20:44.749 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Attribute (`nome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:44.750 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `sobrenome` : value = string2
+2021-05-28 00:20:44.750 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Attribute (`sobrenome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:44.750 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `telefone` : value = string2
+2021-05-28 00:20:44.751 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Attribute (`telefone`)  - enhanced for lazy-loading? - false
+2021-05-28 00:20:44.751 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:20:44.759 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.e.t.internal.TransactionImpl         : committing
+2021-05-28 00:20:44.759 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2021-05-28 00:20:44.759 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2021-05-28 00:20:44.760 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2021-05-28 00:20:44.760 DEBUG 2352 --- [http-nio-8080-exec-3] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2021-05-28 00:20:44.760 DEBUG 2352 --- [http-nio-8080-exec-3] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2021-05-28 00:20:44.760 DEBUG 2352 --- [http-nio-8080-exec-3] o.hibernate.internal.util.EntityPrinter  : br.com.resilire.model.Psicologo{crp=string2, telefone=string2, especialidade=string2, idPsicologo=1, idEndereco=0, nome=string2, sobrenome=string2, email=string2}
+2021-05-28 00:20:44.766 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:20:44.766 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[br.com.resilire.controller.dto.PsicologoDto@5fa1657d]]
+2021-05-28 00:20:44.767 DEBUG 2352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-05-28 00:20:56.779 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/psicologo/", parameters={}
+2021-05-28 00:20:56.780 DEBUG 2352 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.resilire.controller.PsicologoController#cadastrar(Psicologo)
+2021-05-28 00:20:56.782 DEBUG 2352 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [br.com.resilire.model.Psicologo@599635c2]
+2021-05-28 00:20:56.782 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2021-05-28 00:20:56.782 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.e.t.internal.TransactionImpl         : begin
+2021-05-28 00:20:56.791 DEBUG 2352 --- [http-nio-8080-exec-10] org.hibernate.loader.Loader              : Loading entity: [br.com.resilire.model.Psicologo#0]
+2021-05-28 00:20:56.791 DEBUG 2352 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select psicologo0_.id_psicologo as id_psico1_4_0_, psicologo0_.crp as crp2_4_0_, psicologo0_.email as email3_4_0_, psicologo0_.especialidade as especial4_4_0_, psicologo0_.id_endereco as id_ender5_4_0_, psicologo0_.nome as nome6_4_0_, psicologo0_.sobrenome as sobrenom7_4_0_, psicologo0_.telefone as telefone8_4_0_ from psicologo psicologo0_ where psicologo0_.id_psicologo=?
+2021-05-28 00:20:56.796 DEBUG 2352 --- [http-nio-8080-exec-10] org.hibernate.loader.Loader              : Done entity load
+2021-05-28 00:20:56.797 DEBUG 2352 --- [http-nio-8080-exec-10] org.hibernate.engine.spi.ActionQueue     : Executing identity-insert immediately
+2021-05-28 00:20:56.797 DEBUG 2352 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : insert into psicologo (crp, email, especialidade, id_endereco, nome, sobrenome, telefone) values (?, ?, ?, ?, ?, ?, ?)
+2021-05-28 00:20:56.802 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.id.IdentifierGeneratorHelper         : Natively generated identity: 2
+2021-05-28 00:20:56.802 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.r.j.i.ResourceRegistryStandardImpl   : HHH000387: ResultSet's statement was not registered
+2021-05-28 00:20:56.802 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.e.t.internal.TransactionImpl         : committing
+2021-05-28 00:20:56.802 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2021-05-28 00:20:56.802 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2021-05-28 00:20:56.802 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2021-05-28 00:20:56.803 DEBUG 2352 --- [http-nio-8080-exec-10] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2021-05-28 00:20:56.803 DEBUG 2352 --- [http-nio-8080-exec-10] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2021-05-28 00:20:56.803 DEBUG 2352 --- [http-nio-8080-exec-10] o.hibernate.internal.util.EntityPrinter  : br.com.resilire.model.Psicologo{crp=string, telefone=string, especialidade=string, idPsicologo=2, idEndereco=0, nome=string, sobrenome=string, email=string}
+2021-05-28 00:20:56.814 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:20:56.814 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [br.com.resilire.controller.dto.PsicologoDto@7e60d7a3]
+2021-05-28 00:20:56.815 DEBUG 2352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2021-05-28 00:21:04.291 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/psicologo/", parameters={}
+2021-05-28 00:21:04.292 DEBUG 2352 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to br.com.resilire.controller.PsicologoController#findAll()
+2021-05-28 00:21:04.294 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2021-05-28 00:21:04.294 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.e.t.internal.TransactionImpl         : begin
+2021-05-28 00:21:04.302 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.q.c.internal.CriteriaQueryImpl       : Rendered criteria query -> select generatedAlias0 from Psicologo as generatedAlias0
+2021-05-28 00:21:04.302 DEBUG 2352 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select psicologo0_.id_psicologo as id_psico1_4_, psicologo0_.crp as crp2_4_, psicologo0_.email as email3_4_, psicologo0_.especialidade as especial4_4_, psicologo0_.id_endereco as id_ender5_4_, psicologo0_.nome as nome6_4_, psicologo0_.sobrenome as sobrenom7_4_, psicologo0_.telefone as telefone8_4_ from psicologo psicologo0_
+2021-05-28 00:21:04.306 DEBUG 2352 --- [http-nio-8080-exec-5] org.hibernate.loader.Loader              : Result set row: 0
+2021-05-28 00:21:04.306 DEBUG 2352 --- [http-nio-8080-exec-5] org.hibernate.loader.Loader              : Result row: EntityKey[br.com.resilire.model.Psicologo#1]
+2021-05-28 00:21:04.306 DEBUG 2352 --- [http-nio-8080-exec-5] org.hibernate.loader.Loader              : Result set row: 1
+2021-05-28 00:21:04.307 DEBUG 2352 --- [http-nio-8080-exec-5] org.hibernate.loader.Loader              : Result row: EntityKey[br.com.resilire.model.Psicologo#2]
+2021-05-28 00:21:04.307 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:21:04.307 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `crp` : value = string2
+2021-05-28 00:21:04.307 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`crp`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `email` : value = string2
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`email`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `especialidade` : value = string2
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`especialidade`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `idEndereco` : value = 0
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`idEndereco`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `nome` : value = string2
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`nome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `sobrenome` : value = string2
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`sobrenome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `telefone` : value = string2
+2021-05-28 00:21:04.308 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`telefone`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [br.com.resilire.model.Psicologo#1]
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [br.com.resilire.model.Psicologo#2]
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `crp` : value = string
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`crp`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `email` : value = string
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`email`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `especialidade` : value = string
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`especialidade`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `idEndereco` : value = 0
+2021-05-28 00:21:04.309 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`idEndereco`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.310 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `nome` : value = string
+2021-05-28 00:21:04.310 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`nome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.310 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `sobrenome` : value = string
+2021-05-28 00:21:04.310 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`sobrenome`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.310 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `telefone` : value = string
+2021-05-28 00:21:04.310 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`telefone`)  - enhanced for lazy-loading? - false
+2021-05-28 00:21:04.310 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [br.com.resilire.model.Psicologo#2]
+2021-05-28 00:21:04.311 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.e.t.internal.TransactionImpl         : committing
+2021-05-28 00:21:04.311 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2021-05-28 00:21:04.311 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2021-05-28 00:21:04.312 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2021-05-28 00:21:04.312 DEBUG 2352 --- [http-nio-8080-exec-5] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2021-05-28 00:21:04.312 DEBUG 2352 --- [http-nio-8080-exec-5] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2021-05-28 00:21:04.312 DEBUG 2352 --- [http-nio-8080-exec-5] o.hibernate.internal.util.EntityPrinter  : br.com.resilire.model.Psicologo{crp=string, telefone=string, especialidade=string, idPsicologo=2, idEndereco=0, nome=string, sobrenome=string, email=string}
+2021-05-28 00:21:04.312 DEBUG 2352 --- [http-nio-8080-exec-5] o.hibernate.internal.util.EntityPrinter  : br.com.resilire.model.Psicologo{crp=string2, telefone=string2, especialidade=string2, idPsicologo=1, idEndereco=0, nome=string2, sobrenome=string2, email=string2}
+2021-05-28 00:21:04.317 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-05-28 00:21:04.317 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[br.com.resilire.controller.dto.PsicologoDto@320ab6f6, br.com.resilire.controller.dto.PsicologoDto@4 (truncated)...]
+2021-05-28 00:21:04.319 DEBUG 2352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

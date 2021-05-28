@@ -1,8 +1,6 @@
-package br.com.resilire.service.impl;
+package br.com.resilire.service;
 
 import org.springframework.stereotype.Service;
-
-import br.com.resilire.service.ConsultaService;
 
 @Service
 public class ConsultaServiceImpl implements ConsultaService {

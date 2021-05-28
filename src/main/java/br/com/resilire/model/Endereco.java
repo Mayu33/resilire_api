@@ -1,49 +1,57 @@
 package br.com.resilire.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Endereco {
+@Table(name = "Endereco")
+public class Endereco implements Serializable{
 
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name="idEndereco")
 	private Long idEndereco;
+	@Column(name="cep")
 	private String cep;
+	@Column(name="rua")
 	private String rua;
+	@Column(name="numero")
 	private String numero;
+	@Column(name="complemento")
 	private String complemento;
+	@Column(name="bairro")
 	private String bairro;
-	private Long idCidade;
-	private Long idUf;
+	@Column(name="cidade")
+	private String cidade;
+	@Column(name="uf")
+	private String uf;
 	
 	
 
 	public Endereco() {
 		super();
 	}
+
 	
-	public Endereco(Long idEndereco, String cep, String rua, String numero, String complemento, String bairro) {
-		super();
-		this.idEndereco = idEndereco;
-		this.cep = cep;
-		this.rua = rua;
-		this.numero = numero;
-		this.complemento = complemento;
-		this.bairro = bairro;
-	}
 
-
-	public Endereco(String cep, String rua, String numero, String complemento, String bairro, Long idCidade, Long idUf) {
+	public Endereco(String cep, String rua, String numero, String complemento, String bairro, String cidade, String uf) {
 		super();
 		this.cep = cep;
 		this.rua = rua;
 		this.numero = numero;
 		this.complemento = complemento;
 		this.bairro = bairro;
-		this.idCidade = idCidade;
-		this.idUf = idUf;
+		this.cidade = cidade;
+		this.uf = uf;
 	}
 
 
@@ -84,20 +92,32 @@ public class Endereco {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public Long getIdCidade() {
-		return idCidade;
-	}
-	public void setIdCidade(Long idCidade) {
-		this.idCidade = idCidade;
-	}
-	public Long getIdUf() {
-		return idUf;
+
+
+
+	public String getCidade() {
+		return cidade;
 	}
 
 
-	public void setIdUf(Long idUf) {
-		this.idUf = idUf;
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
+
+
+
+	public String getUf() {
+		return uf;
+	}
+
+
+
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+
+	
 	
 	
 

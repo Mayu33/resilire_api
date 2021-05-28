@@ -1,0 +1,921 @@
+[2021-05-18 20:13:35.055] - 17732 INFO [restartedMain] --- org.apache.catalina.core.StandardService: Starting service [Tomcat]
+[2021-05-18 20:13:35.067] - 17732 INFO [restartedMain] --- org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.45]
+[2021-05-18 20:13:35.161] - 17732 INFO [restartedMain] --- org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]: Initializing Spring embedded WebApplicationContext
+[2021-05-18 20:13:35.359] - 17732 DEBUG [restartedMain] --- org.hibernate.jpa.internal.util.LogHelper: PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: org.springframework.boot.devtools.restart.classloader.RestartClassLoader@32639a20
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/C:/Users/mayara.barranco/Downloads/resilire/target/classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		br.com.resilire.model.Cidade
+		br.com.resilire.model.Consulta
+		br.com.resilire.model.Endereco
+		br.com.resilire.model.Especialidade
+		br.com.resilire.model.Paciente
+		br.com.resilire.model.Prontuario
+		br.com.resilire.model.Psicologo
+		br.com.resilire.model.Uf]
+	Mapping files names []
+	Properties []
+[2021-05-18 20:13:35.377] - 17732 DEBUG [restartedMain] --- org.hibernate.integrator.internal.IntegratorServiceImpl: Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[2021-05-18 20:13:35.381] - 17732 DEBUG [restartedMain] --- org.hibernate.integrator.internal.IntegratorServiceImpl: Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[2021-05-18 20:13:35.385] - 17732 DEBUG [restartedMain] --- org.hibernate.integrator.internal.IntegratorServiceImpl: Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[2021-05-18 20:13:35.431] - 17732 INFO [restartedMain] --- org.hibernate.Version: HHH000412: Hibernate ORM core version 5.4.30.Final
+[2021-05-18 20:13:35.432] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+[2021-05-18 20:13:35.592] - 17732 DEBUG [restartedMain] --- org.hibernate.service.spi.ServiceBinding: Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[2021-05-18 20:13:35.603] - 17732 DEBUG [restartedMain] --- org.hibernate.cache.internal.RegionFactoryInitiator: Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[2021-05-18 20:13:35.605] - 17732 DEBUG [restartedMain] --- org.hibernate.cache.internal.RegionFactoryInitiator: Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[2021-05-18 20:13:35.623] - 17732 INFO [restartedMain] --- org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-05-18 20:13:35.675] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration boolean -> org.hibernate.type.BooleanType@1a5fc722
+[2021-05-18 20:13:35.676] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration boolean -> org.hibernate.type.BooleanType@1a5fc722
+[2021-05-18 20:13:35.677] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1a5fc722
+[2021-05-18 20:13:35.679] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@101ddb08
+[2021-05-18 20:13:35.680] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration true_false -> org.hibernate.type.TrueFalseType@12aa590f
+[2021-05-18 20:13:35.681] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration yes_no -> org.hibernate.type.YesNoType@389df036
+[2021-05-18 20:13:35.683] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration byte -> org.hibernate.type.ByteType@7161adb6
+[2021-05-18 20:13:35.684] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration byte -> org.hibernate.type.ByteType@7161adb6
+[2021-05-18 20:13:35.685] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7161adb6
+[2021-05-18 20:13:35.687] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration character -> org.hibernate.type.CharacterType@7f9c58a3
+[2021-05-18 20:13:35.688] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration char -> org.hibernate.type.CharacterType@7f9c58a3
+[2021-05-18 20:13:35.688] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@7f9c58a3
+[2021-05-18 20:13:35.690] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration short -> org.hibernate.type.ShortType@e3be4b0
+[2021-05-18 20:13:35.691] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration short -> org.hibernate.type.ShortType@e3be4b0
+[2021-05-18 20:13:35.692] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Short -> org.hibernate.type.ShortType@e3be4b0
+[2021-05-18 20:13:35.693] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration integer -> org.hibernate.type.IntegerType@5c57f045
+[2021-05-18 20:13:35.694] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration int -> org.hibernate.type.IntegerType@5c57f045
+[2021-05-18 20:13:35.695] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5c57f045
+[2021-05-18 20:13:35.698] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration long -> org.hibernate.type.LongType@203e3e0e
+[2021-05-18 20:13:35.699] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration long -> org.hibernate.type.LongType@203e3e0e
+[2021-05-18 20:13:35.700] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Long -> org.hibernate.type.LongType@203e3e0e
+[2021-05-18 20:13:35.702] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration float -> org.hibernate.type.FloatType@4e152bfd
+[2021-05-18 20:13:35.703] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration float -> org.hibernate.type.FloatType@4e152bfd
+[2021-05-18 20:13:35.704] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4e152bfd
+[2021-05-18 20:13:35.706] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration double -> org.hibernate.type.DoubleType@28a9e4af
+[2021-05-18 20:13:35.707] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration double -> org.hibernate.type.DoubleType@28a9e4af
+[2021-05-18 20:13:35.708] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@28a9e4af
+[2021-05-18 20:13:35.709] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@5abb39fd
+[2021-05-18 20:13:35.710] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@5abb39fd
+[2021-05-18 20:13:35.713] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration big_integer -> org.hibernate.type.BigIntegerType@5323f791
+[2021-05-18 20:13:35.714] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@5323f791
+[2021-05-18 20:13:35.716] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration string -> org.hibernate.type.StringType@27b156b5
+[2021-05-18 20:13:35.717] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.String -> org.hibernate.type.StringType@27b156b5
+[2021-05-18 20:13:35.719] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration nstring -> org.hibernate.type.StringNVarcharType@15df825d
+[2021-05-18 20:13:35.721] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@247fe884
+[2021-05-18 20:13:35.723] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration url -> org.hibernate.type.UrlType@525cf79b
+[2021-05-18 20:13:35.724] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.net.URL -> org.hibernate.type.UrlType@525cf79b
+[2021-05-18 20:13:35.726] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration Duration -> org.hibernate.type.DurationType@52717957
+[2021-05-18 20:13:35.726] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.Duration -> org.hibernate.type.DurationType@52717957
+[2021-05-18 20:13:35.728] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration Instant -> org.hibernate.type.InstantType@6ce32bde
+[2021-05-18 20:13:35.729] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.Instant -> org.hibernate.type.InstantType@6ce32bde
+[2021-05-18 20:13:35.731] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@47e9d712
+[2021-05-18 20:13:35.732] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@47e9d712
+[2021-05-18 20:13:35.735] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7f3d5185
+[2021-05-18 20:13:35.736] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7f3d5185
+[2021-05-18 20:13:35.738] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@18ca6c78
+[2021-05-18 20:13:35.738] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@18ca6c78
+[2021-05-18 20:13:35.741] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7f913879
+[2021-05-18 20:13:35.741] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7f913879
+[2021-05-18 20:13:35.743] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@43cf8c69
+[2021-05-18 20:13:35.744] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@43cf8c69
+[2021-05-18 20:13:35.746] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1c9e883c
+[2021-05-18 20:13:35.747] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1c9e883c
+[2021-05-18 20:13:35.749] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration date -> org.hibernate.type.DateType@6cd3b82f
+[2021-05-18 20:13:35.750] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.sql.Date -> org.hibernate.type.DateType@6cd3b82f
+[2021-05-18 20:13:35.752] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration time -> org.hibernate.type.TimeType@10b2498
+[2021-05-18 20:13:35.752] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.sql.Time -> org.hibernate.type.TimeType@10b2498
+[2021-05-18 20:13:35.754] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration timestamp -> org.hibernate.type.TimestampType@4c28b359
+[2021-05-18 20:13:35.755] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4c28b359
+[2021-05-18 20:13:35.755] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4c28b359
+[2021-05-18 20:13:35.757] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@4c697642
+[2021-05-18 20:13:35.759] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration calendar -> org.hibernate.type.CalendarType@1798daa7
+[2021-05-18 20:13:35.761] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1798daa7
+[2021-05-18 20:13:35.761] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1798daa7
+[2021-05-18 20:13:35.763] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@1df97ed0
+[2021-05-18 20:13:35.765] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@3956186c
+[2021-05-18 20:13:35.767] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration locale -> org.hibernate.type.LocaleType@17a250d9
+[2021-05-18 20:13:35.767] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@17a250d9
+[2021-05-18 20:13:35.769] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration currency -> org.hibernate.type.CurrencyType@20085b5b
+[2021-05-18 20:13:35.770] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@20085b5b
+[2021-05-18 20:13:35.772] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration timezone -> org.hibernate.type.TimeZoneType@41e46072
+[2021-05-18 20:13:35.773] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@41e46072
+[2021-05-18 20:13:35.775] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration class -> org.hibernate.type.ClassType@44afecc3
+[2021-05-18 20:13:35.776] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Class -> org.hibernate.type.ClassType@44afecc3
+[2021-05-18 20:13:35.778] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@2804b41a
+[2021-05-18 20:13:35.778] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@2804b41a
+[2021-05-18 20:13:35.779] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6b6c9ebb
+[2021-05-18 20:13:35.781] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration binary -> org.hibernate.type.BinaryType@4baf6b1e
+[2021-05-18 20:13:35.782] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration byte[] -> org.hibernate.type.BinaryType@4baf6b1e
+[2021-05-18 20:13:35.782] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration [B -> org.hibernate.type.BinaryType@4baf6b1e
+[2021-05-18 20:13:35.785] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@73f657b4
+[2021-05-18 20:13:35.785] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@73f657b4
+[2021-05-18 20:13:35.786] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@73f657b4
+[2021-05-18 20:13:35.788] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration row_version -> org.hibernate.type.RowVersionType@799b4d07
+[2021-05-18 20:13:35.789] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration image -> org.hibernate.type.ImageType@78391fb8
+[2021-05-18 20:13:35.791] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration characters -> org.hibernate.type.CharArrayType@686eb507
+[2021-05-18 20:13:35.792] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration char[] -> org.hibernate.type.CharArrayType@686eb507
+[2021-05-18 20:13:35.792] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration [C -> org.hibernate.type.CharArrayType@686eb507
+[2021-05-18 20:13:35.795] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@5d37388d
+[2021-05-18 20:13:35.797] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@5d37388d
+[2021-05-18 20:13:35.798] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@5d37388d
+[2021-05-18 20:13:35.800] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration text -> org.hibernate.type.TextType@5edb5e2c
+[2021-05-18 20:13:35.802] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration ntext -> org.hibernate.type.NTextType@26705260
+[2021-05-18 20:13:35.804] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration blob -> org.hibernate.type.BlobType@68f3d7ec
+[2021-05-18 20:13:35.805] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@68f3d7ec
+[2021-05-18 20:13:35.806] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@6ea4df99
+[2021-05-18 20:13:35.808] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration clob -> org.hibernate.type.ClobType@7671d0cc
+[2021-05-18 20:13:35.809] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@7671d0cc
+[2021-05-18 20:13:35.810] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration nclob -> org.hibernate.type.NClobType@5c3d915d
+[2021-05-18 20:13:35.811] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@5c3d915d
+[2021-05-18 20:13:35.812] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@39ec334f
+[2021-05-18 20:13:35.813] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1ee49100
+[2021-05-18 20:13:35.815] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration serializable -> org.hibernate.type.SerializableType@27951e93
+[2021-05-18 20:13:35.821] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration object -> org.hibernate.type.ObjectType@69bec001
+[2021-05-18 20:13:35.822] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@69bec001
+[2021-05-18 20:13:35.824] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5dd7c7d5
+[2021-05-18 20:13:35.825] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@2964a01e
+[2021-05-18 20:13:35.825] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@7320b2ec
+[2021-05-18 20:13:35.826] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@46b39f3
+[2021-05-18 20:13:35.827] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@6761bfc4
+[2021-05-18 20:13:35.828] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6b899766
+[2021-05-18 20:13:35.829] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1dc8ff29
+[2021-05-18 20:13:35.830] - 17732 DEBUG [restartedMain] --- org.hibernate.type.BasicTypeRegistry: Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@4031e9c2
+[2021-05-18 20:13:35.847] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.BootstrapContextImpl: Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@533659cb] into BootstrapContext; was [null]
+[2021-05-18 20:13:35.848] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@533659cb) [was null]
+[2021-05-18 20:13:35.850] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.BootstrapContextImpl: Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@52c03191] into BootstrapContext; was [null]
+[2021-05-18 20:13:35.851] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.BootstrapContextImpl: Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@50614de2] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@42ba4d30]
+[2021-05-18 20:13:35.874] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.BootstrapContextImpl: Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@533659cb]
+[2021-05-18 20:13:35.875] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@533659cb]
+[2021-05-18 20:13:35.890] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[2021-05-18 20:13:35.891] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[2021-05-18 20:13:35.894] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[2021-05-18 20:13:35.895] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[2021-05-18 20:13:35.896] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[2021-05-18 20:13:35.898] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[2021-05-18 20:13:35.898] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[2021-05-18 20:13:35.900] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[2021-05-18 20:13:35.902] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[2021-05-18 20:13:35.903] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[2021-05-18 20:13:35.904] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[2021-05-18 20:13:35.905] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[2021-05-18 20:13:35.906] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[2021-05-18 20:13:35.907] - 17732 DEBUG [restartedMain] --- org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory: Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[2021-05-18 20:13:41.156] - 17732 WARN [restartedMain] --- org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator: HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at br.com.resilire.ResilireApplication.main(ResilireApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+	... 55 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 58 more
+
+[2021-05-18 20:13:41.198] - 17732 INFO [restartedMain] --- org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-05-18 20:13:41.212] - 17732 DEBUG [restartedMain] --- org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder: IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[2021-05-18 20:13:41.217] - 17732 DEBUG [restartedMain] --- org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: HHH000422: Disabling contextual LOB creation as connection was null
+[2021-05-18 20:13:41.222] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.model.relational.Namespace: Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[2021-05-18 20:13:41.225] - 17732 DEBUG [restartedMain] --- org.hibernate.type.spi.TypeConfiguration$Scope: Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@56d05734] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@66b5c11f]
+[2021-05-18 20:13:41.274] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Cidade
+[2021-05-18 20:13:41.289] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.294] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Cidade
+[2021-05-18 20:13:41.300] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Cidade on table cidade
+[2021-05-18 20:13:41.313] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cidade), mappingColumn=id_cidade, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.315] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Cidade] is safe
+[2021-05-18 20:13:41.316] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Cidade
+[2021-05-18 20:13:41.316] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idCidade with lazy=false
+[2021-05-18 20:13:41.318] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Cidade:idCidade]
+[2021-05-18 20:13:41.320] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idCidade
+[2021-05-18 20:13:41.322] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idCidade
+[2021-05-18 20:13:41.324] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_cidade)]), idCidade, identity, , ...)
+[2021-05-18 20:13:41.325] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cidade), mappingColumn=id_uf, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.326] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idUf with lazy=false
+[2021-05-18 20:13:41.326] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Cidade:idUf]
+[2021-05-18 20:13:41.327] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idUf
+[2021-05-18 20:13:41.327] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idUf
+[2021-05-18 20:13:41.328] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(cidade), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.328] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property nome with lazy=false
+[2021-05-18 20:13:41.329] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Cidade:nome]
+[2021-05-18 20:13:41.329] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for nome
+[2021-05-18 20:13:41.330] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property nome
+[2021-05-18 20:13:41.332] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Consulta
+[2021-05-18 20:13:41.332] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.333] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Consulta
+[2021-05-18 20:13:41.333] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Consulta on table consulta
+[2021-05-18 20:13:41.334] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_consulta, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.334] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Consulta] is safe
+[2021-05-18 20:13:41.334] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Consulta
+[2021-05-18 20:13:41.335] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idConsulta with lazy=false
+[2021-05-18 20:13:41.335] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idConsulta]
+[2021-05-18 20:13:41.335] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idConsulta
+[2021-05-18 20:13:41.335] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idConsulta
+[2021-05-18 20:13:41.336] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_consulta)]), idConsulta, identity, , ...)
+[2021-05-18 20:13:41.336] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=data_consulta, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.336] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property dataConsulta with lazy=false
+[2021-05-18 20:13:41.336] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:dataConsulta]
+[2021-05-18 20:13:41.337] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for dataConsulta
+[2021-05-18 20:13:41.337] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property dataConsulta
+[2021-05-18 20:13:41.337] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_paciente, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.338] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idPaciente with lazy=false
+[2021-05-18 20:13:41.338] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idPaciente]
+[2021-05-18 20:13:41.338] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idPaciente
+[2021-05-18 20:13:41.338] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idPaciente
+[2021-05-18 20:13:41.339] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_prontuario, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.339] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idProntuario with lazy=false
+[2021-05-18 20:13:41.340] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idProntuario]
+[2021-05-18 20:13:41.340] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idProntuario
+[2021-05-18 20:13:41.340] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idProntuario
+[2021-05-18 20:13:41.340] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(consulta), mappingColumn=id_psicologo, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.340] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idPsicologo with lazy=false
+[2021-05-18 20:13:41.341] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Consulta:idPsicologo]
+[2021-05-18 20:13:41.341] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idPsicologo
+[2021-05-18 20:13:41.341] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idPsicologo
+[2021-05-18 20:13:41.341] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Endereco
+[2021-05-18 20:13:41.343] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.343] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Endereco
+[2021-05-18 20:13:41.343] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Endereco on table endereco
+[2021-05-18 20:13:41.343] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=id_endereco, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.344] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Endereco] is safe
+[2021-05-18 20:13:41.344] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Endereco
+[2021-05-18 20:13:41.345] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idEndereco with lazy=false
+[2021-05-18 20:13:41.345] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:idEndereco]
+[2021-05-18 20:13:41.345] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idEndereco
+[2021-05-18 20:13:41.345] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idEndereco
+[2021-05-18 20:13:41.346] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_endereco)]), idEndereco, identity, , ...)
+[2021-05-18 20:13:41.346] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=bairro, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.346] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property bairro with lazy=false
+[2021-05-18 20:13:41.347] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:bairro]
+[2021-05-18 20:13:41.348] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for bairro
+[2021-05-18 20:13:41.348] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property bairro
+[2021-05-18 20:13:41.348] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=cep, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.348] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property cep with lazy=false
+[2021-05-18 20:13:41.348] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:cep]
+[2021-05-18 20:13:41.348] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for cep
+[2021-05-18 20:13:41.349] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property cep
+[2021-05-18 20:13:41.349] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=complemento, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.349] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property complemento with lazy=false
+[2021-05-18 20:13:41.350] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:complemento]
+[2021-05-18 20:13:41.350] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for complemento
+[2021-05-18 20:13:41.350] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property complemento
+[2021-05-18 20:13:41.350] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=id_cidade, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.350] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idCidade with lazy=false
+[2021-05-18 20:13:41.351] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:idCidade]
+[2021-05-18 20:13:41.351] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idCidade
+[2021-05-18 20:13:41.351] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idCidade
+[2021-05-18 20:13:41.351] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=id_uf, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.352] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idUf with lazy=false
+[2021-05-18 20:13:41.352] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:idUf]
+[2021-05-18 20:13:41.352] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idUf
+[2021-05-18 20:13:41.352] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idUf
+[2021-05-18 20:13:41.353] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=numero, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.353] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property numero with lazy=false
+[2021-05-18 20:13:41.353] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:numero]
+[2021-05-18 20:13:41.354] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for numero
+[2021-05-18 20:13:41.354] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property numero
+[2021-05-18 20:13:41.354] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(endereco), mappingColumn=rua, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.354] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property rua with lazy=false
+[2021-05-18 20:13:41.355] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Endereco:rua]
+[2021-05-18 20:13:41.355] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for rua
+[2021-05-18 20:13:41.355] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property rua
+[2021-05-18 20:13:41.356] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Especialidade
+[2021-05-18 20:13:41.356] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.356] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Especialidade
+[2021-05-18 20:13:41.357] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Especialidade on table especialidade
+[2021-05-18 20:13:41.357] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(especialidade), mappingColumn=id_especialidade, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.358] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Especialidade] is safe
+[2021-05-18 20:13:41.358] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Especialidade
+[2021-05-18 20:13:41.359] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idEspecialidade with lazy=false
+[2021-05-18 20:13:41.359] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Especialidade:idEspecialidade]
+[2021-05-18 20:13:41.359] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idEspecialidade
+[2021-05-18 20:13:41.359] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idEspecialidade
+[2021-05-18 20:13:41.359] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_especialidade)]), idEspecialidade, identity, , ...)
+[2021-05-18 20:13:41.360] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(especialidade), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property nome with lazy=false
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Especialidade:nome]
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for nome
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property nome
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Paciente
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Paciente
+[2021-05-18 20:13:41.361] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Paciente on table paciente
+[2021-05-18 20:13:41.363] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=id_paciente, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.363] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Paciente] is safe
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Paciente
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idPaciente with lazy=false
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:idPaciente]
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idPaciente
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idPaciente
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_paciente)]), idPaciente, identity, , ...)
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=cpf, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property cpf with lazy=false
+[2021-05-18 20:13:41.364] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:cpf]
+[2021-05-18 20:13:41.365] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for cpf
+[2021-05-18 20:13:41.365] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property cpf
+[2021-05-18 20:13:41.365] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=email, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.365] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property email with lazy=false
+[2021-05-18 20:13:41.365] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:email]
+[2021-05-18 20:13:41.366] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for email
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property email
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=id_endereco, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idEndereco with lazy=false
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:idEndereco]
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idEndereco
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idEndereco
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.367] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property nome with lazy=false
+[2021-05-18 20:13:41.368] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:nome]
+[2021-05-18 20:13:41.368] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for nome
+[2021-05-18 20:13:41.368] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property nome
+[2021-05-18 20:13:41.368] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=sexo, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.368] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property sexo with lazy=false
+[2021-05-18 20:13:41.368] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:sexo]
+[2021-05-18 20:13:41.369] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for sexo
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property sexo
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=sobrenome, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property sobrenome with lazy=false
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:sobrenome]
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for sobrenome
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property sobrenome
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(paciente), mappingColumn=telefone, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.370] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property telefone with lazy=false
+[2021-05-18 20:13:41.371] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Paciente:telefone]
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for telefone
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property telefone
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Prontuario
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Prontuario
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Prontuario on table prontuario
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=id_prontuario, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.372] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Prontuario] is safe
+[2021-05-18 20:13:41.373] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Prontuario
+[2021-05-18 20:13:41.373] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idProntuario with lazy=false
+[2021-05-18 20:13:41.373] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:idProntuario]
+[2021-05-18 20:13:41.373] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idProntuario
+[2021-05-18 20:13:41.373] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idProntuario
+[2021-05-18 20:13:41.373] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_prontuario)]), idProntuario, identity, , ...)
+[2021-05-18 20:13:41.374] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=id_paciente, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.374] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idPaciente with lazy=false
+[2021-05-18 20:13:41.374] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:idPaciente]
+[2021-05-18 20:13:41.374] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idPaciente
+[2021-05-18 20:13:41.374] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idPaciente
+[2021-05-18 20:13:41.375] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=observacao, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.375] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property observacao with lazy=false
+[2021-05-18 20:13:41.375] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:observacao]
+[2021-05-18 20:13:41.375] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for observacao
+[2021-05-18 20:13:41.376] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property observacao
+[2021-05-18 20:13:41.376] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(prontuario), mappingColumn=prescricao, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.376] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property prescricao with lazy=false
+[2021-05-18 20:13:41.376] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Prontuario:prescricao]
+[2021-05-18 20:13:41.377] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for prescricao
+[2021-05-18 20:13:41.377] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property prescricao
+[2021-05-18 20:13:41.377] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Psicologo
+[2021-05-18 20:13:41.377] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.378] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Psicologo
+[2021-05-18 20:13:41.378] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Psicologo on table psicologo
+[2021-05-18 20:13:41.379] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=id_psicologo, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.379] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Psicologo] is safe
+[2021-05-18 20:13:41.380] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Psicologo
+[2021-05-18 20:13:41.380] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idPsicologo with lazy=false
+[2021-05-18 20:13:41.380] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:idPsicologo]
+[2021-05-18 20:13:41.380] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idPsicologo
+[2021-05-18 20:13:41.382] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idPsicologo
+[2021-05-18 20:13:41.382] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_psicologo)]), idPsicologo, identity, , ...)
+[2021-05-18 20:13:41.382] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=crp, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.382] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property crp with lazy=false
+[2021-05-18 20:13:41.382] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:crp]
+[2021-05-18 20:13:41.382] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for crp
+[2021-05-18 20:13:41.382] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property crp
+[2021-05-18 20:13:41.383] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=email, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.383] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property email with lazy=false
+[2021-05-18 20:13:41.383] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:email]
+[2021-05-18 20:13:41.384] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for email
+[2021-05-18 20:13:41.384] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property email
+[2021-05-18 20:13:41.385] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=id_endereco, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.385] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idEndereco with lazy=false
+[2021-05-18 20:13:41.385] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:idEndereco]
+[2021-05-18 20:13:41.386] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idEndereco
+[2021-05-18 20:13:41.386] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idEndereco
+[2021-05-18 20:13:41.386] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=id_especialidade, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.386] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idEspecialidade with lazy=false
+[2021-05-18 20:13:41.386] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:idEspecialidade]
+[2021-05-18 20:13:41.387] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idEspecialidade
+[2021-05-18 20:13:41.387] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idEspecialidade
+[2021-05-18 20:13:41.387] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.387] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property nome with lazy=false
+[2021-05-18 20:13:41.388] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:nome]
+[2021-05-18 20:13:41.389] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for nome
+[2021-05-18 20:13:41.389] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property nome
+[2021-05-18 20:13:41.389] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=sobrenome, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.389] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property sobrenome with lazy=false
+[2021-05-18 20:13:41.390] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:sobrenome]
+[2021-05-18 20:13:41.390] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for sobrenome
+[2021-05-18 20:13:41.390] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property sobrenome
+[2021-05-18 20:13:41.390] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(psicologo), mappingColumn=telefone, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.391] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property telefone with lazy=false
+[2021-05-18 20:13:41.391] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Psicologo:telefone]
+[2021-05-18 20:13:41.391] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for telefone
+[2021-05-18 20:13:41.391] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property telefone
+[2021-05-18 20:13:41.392] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AnnotationBinder: Binding entity from annotated class: br.com.resilire.model.Uf
+[2021-05-18 20:13:41.393] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2021-05-18 20:13:41.393] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Import with entity name Uf
+[2021-05-18 20:13:41.393] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.EntityBinder: Bind entity br.com.resilire.model.Uf on table uf
+[2021-05-18 20:13:41.393] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(uf), mappingColumn=id_uf, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.393] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Uf] is safe
+[2021-05-18 20:13:41.393] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Uf
+[2021-05-18 20:13:41.394] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property idUf with lazy=false
+[2021-05-18 20:13:41.394] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Uf:idUf]
+[2021-05-18 20:13:41.394] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for idUf
+[2021-05-18 20:13:41.394] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property idUf
+[2021-05-18 20:13:41.395] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.BinderHelper: #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id_uf)]), idUf, identity, , ...)
+[2021-05-18 20:13:41.395] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Ejb3Column: Binding column: Ejb3Column{table=org.hibernate.mapping.Table(uf), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+[2021-05-18 20:13:41.396] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: MetadataSourceProcessor property nome with lazy=false
+[2021-05-18 20:13:41.396] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.AbstractPropertyHolder: Attempting to locate auto-apply AttributeConverter for property [br.com.resilire.model.Uf:nome]
+[2021-05-18 20:13:41.396] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: building SimpleValue for nome
+[2021-05-18 20:13:41.396] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.PropertyBinder: Building property nome
+[2021-05-18 20:13:41.397] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idCidade
+[2021-05-18 20:13:41.398] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idUf
+[2021-05-18 20:13:41.398] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for nome
+[2021-05-18 20:13:41.398] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idConsulta
+[2021-05-18 20:13:41.398] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for dataConsulta
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idPaciente
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idProntuario
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idPsicologo
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idEndereco
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for bairro
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for cep
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for complemento
+[2021-05-18 20:13:41.399] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idCidade
+[2021-05-18 20:13:41.400] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idUf
+[2021-05-18 20:13:41.400] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for numero
+[2021-05-18 20:13:41.400] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for rua
+[2021-05-18 20:13:41.400] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idEspecialidade
+[2021-05-18 20:13:41.400] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for nome
+[2021-05-18 20:13:41.401] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idPaciente
+[2021-05-18 20:13:41.401] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for cpf
+[2021-05-18 20:13:41.401] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for email
+[2021-05-18 20:13:41.401] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idEndereco
+[2021-05-18 20:13:41.401] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for nome
+[2021-05-18 20:13:41.402] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for sexo
+[2021-05-18 20:13:41.402] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for sobrenome
+[2021-05-18 20:13:41.403] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for telefone
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idProntuario
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idPaciente
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for observacao
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for prescricao
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idPsicologo
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for crp
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for email
+[2021-05-18 20:13:41.404] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idEndereco
+[2021-05-18 20:13:41.405] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idEspecialidade
+[2021-05-18 20:13:41.405] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for nome
+[2021-05-18 20:13:41.405] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for sobrenome
+[2021-05-18 20:13:41.405] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for telefone
+[2021-05-18 20:13:41.405] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for idUf
+[2021-05-18 20:13:41.405] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.annotations.SimpleValueBinder: Starting fillSimpleValue for nome
+[2021-05-18 20:13:41.407] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_cidade] to be non-null as it is part of the primary key for table [cidade]
+[2021-05-18 20:13:41.407] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_consulta] to be non-null as it is part of the primary key for table [consulta]
+[2021-05-18 20:13:41.408] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_endereco] to be non-null as it is part of the primary key for table [endereco]
+[2021-05-18 20:13:41.408] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_especialidade] to be non-null as it is part of the primary key for table [especialidade]
+[2021-05-18 20:13:41.408] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_paciente] to be non-null as it is part of the primary key for table [paciente]
+[2021-05-18 20:13:41.408] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_prontuario] to be non-null as it is part of the primary key for table [prontuario]
+[2021-05-18 20:13:41.408] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_psicologo] to be non-null as it is part of the primary key for table [psicologo]
+[2021-05-18 20:13:41.408] - 17732 DEBUG [restartedMain] --- org.hibernate.mapping.PrimaryKey: Forcing column [id_uf] to be non-null as it is part of the primary key for table [uf]
+[2021-05-18 20:13:41.444] - 17732 DEBUG [restartedMain] --- org.hibernate.internal.SessionFactoryImpl: Building session factory
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: SessionFactory name : null
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Automatic flush during beforeCompletion(): enabled
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Automatic session close at end of transaction: disabled
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Statistics: disabled
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Deleted entity synthetic identifier rollback: disabled
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Default entity-mode: pojo
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Allow initialization of lazy state outside session : disabled
+[2021-05-18 20:13:41.445] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Using BatchFetchStyle : LEGACY
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Default batch fetch size: -1
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Maximum outer join fetch depth: 2
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Default null ordering: NONE
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Order SQL updates by primary key: disabled
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Order SQL inserts for batching: disabled
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: multi-tenancy strategy : NONE
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JTA Track by Thread: enabled
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Query language substitutions: {}
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Named query checking : enabled
+[2021-05-18 20:13:41.446] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Second-level cache: disabled
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Second-level query cache: disabled
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Second-level query cache factory: null
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Second-level cache region prefix: null
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Optimize second-level cache for minimal puts: disabled
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Structured second-level cache entries: disabled
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Second-level cache direct-reference entries: disabled
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Automatic eviction of collection cache: disabled
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JDBC batch size: 0
+[2021-05-18 20:13:41.447] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JDBC batch updates for versioned data: enabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Scrollable result sets: disabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Wrap result sets: disabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JDBC3 getGeneratedKeys(): disabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JDBC result set fetch size: null
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Connection release mode: ON_CLOSE
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: Generate SQL with comments: disabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JPA compliance - query : disabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JPA compliance - closed-handling : disabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JPA compliance - lists : disabled
+[2021-05-18 20:13:41.448] - 17732 DEBUG [restartedMain] --- org.hibernate.cfg.Settings: JPA compliance - transactions : disabled
+[2021-05-18 20:13:41.502] - 17732 DEBUG [restartedMain] --- org.hibernate.internal.SessionFactoryImpl: Session factory constructed with filter configurations : {}
+[2021-05-18 20:13:41.502] - 17732 DEBUG [restartedMain] --- org.hibernate.internal.SessionFactoryImpl: Instantiating session factory with properties: {hibernate.id.new_generator_mappings=true, java.specification.version=15, sun.cpu.isalist=amd64, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@7a34befd, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.MySQL8Dialect, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=C:\Users\mayara.barranco\Downloads\resilire\target\classes;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter\2.4.5\spring-boot-starter-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot\2.4.5\spring-boot-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.4.5\spring-boot-autoconfigure-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-core\5.3.6\spring-core-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-jcl\5.3.6\spring-jcl-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\yaml\snakeyaml\1.27\snakeyaml-1.27.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\data\spring-data-jpa\2.4.2\spring-data-jpa-2.4.2.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\data\spring-data-commons\2.4.8\spring-data-commons-2.4.8.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-orm\5.3.6\spring-orm-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-jdbc\5.3.6\spring-jdbc-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-context\5.3.6\spring-context-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-expression\5.3.6\spring-expression-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-aop\5.3.6\spring-aop-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-tx\5.3.6\spring-tx-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-beans\5.3.6\spring-beans-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\aspectj\aspectjrt\1.9.6\aspectjrt-1.9.6.jar;C:\Users\mayara.barranco\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.4.5\spring-boot-starter-data-jpa-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.4.5\spring-boot-starter-aop-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.4.5\spring-boot-starter-jdbc-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\mayara.barranco\.m2\repository\org\hibernate\hibernate-core\5.4.30.Final\hibernate-core-5.4.30.Final.jar;C:\Users\mayara.barranco\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\mayara.barranco\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\mayara.barranco\.m2\repository\net\bytebuddy\byte-buddy\1.10.22\byte-buddy-1.10.22.jar;C:\Users\mayara.barranco\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\mayara.barranco\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\mayara.barranco\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\mayara.barranco\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\mayara.barranco\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.4\jaxb-runtime-2.3.4.jar;C:\Users\mayara.barranco\.m2\repository\org\glassfish\jaxb\txw2\2.3.4\txw2-2.3.4.jar;C:\Users\mayara.barranco\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\mayara.barranco\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-aspects\5.3.6\spring-aspects-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.4.5\spring-boot-starter-web-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.4.5\spring-boot-starter-json-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.4\jackson-datatype-jdk8-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.4\jackson-module-parameter-names-2.11.4.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.4.5\spring-boot-starter-tomcat-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.45\tomcat-embed-core-9.0.45.jar;C:\Users\mayara.barranco\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\mayara.barranco\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.45\tomcat-embed-websocket-9.0.45.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-web\5.3.6\spring-web-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\spring-webmvc\5.3.6\spring-webmvc-5.3.6.jar;C:\Users\mayara.barranco\.m2\repository\org\springframework\boot\spring-boot-devtools\2.4.5\spring-boot-devtools-2.4.5.jar;C:\Users\mayara.barranco\.m2\repository\mysql\mysql-connector-java\8.0.23\mysql-connector-java-8.0.23.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\mayara.barranco\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=https://java.oracle.com/, catalina.useNaming=false, user.timezone=America/Sao_Paulo, java.vm.specification.version=15, os.name=Windows 10, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=BR, sun.boot.library.path=C:\Users\mayara.barranco\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin, sun.java.command=br.com.resilire.ResilireApplication, javax.persistence.nonJtaDataSource=HikariDataSource (null), hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@1e5141f1, javax.persistence.sharedCache.mode=UNSPECIFIED, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\mayara.barranco, user.language=pt, java.specification.vendor=Oracle Corporation, java.version.date=2021-01-19, java.home=C:\Users\mayara.barranco\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, FILE_LOG_CHARSET=UTF-8, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.headless=true, hibernate.hbm2ddl.auto=update, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=15.0.2+7-27, user.name=mayara.barranco, path.separator=;, os.version=10.0, java.runtime.name=OpenJDK Runtime Environment, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=default, spring.beaninfo.ignore=true, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, LOG_FILE=ResilireLogFile.log, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\MAYARA~1.BAR\AppData\Local\Temp\, catalina.home=C:\Users\mayara.barranco\AppData\Local\Temp\tomcat.8080.10137639636016513720, java.version=15.0.2, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, user.dir=C:\Users\mayara.barranco\Downloads\resilire, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, PID=17732, sun.os.patch.level=, CONSOLE_LOG_CHARSET=UTF-8, catalina.base=C:\Users\mayara.barranco\AppData\Local\Temp\tomcat.8080.10137639636016513720, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@61c9c661, java.library.path=C:\Users\mayara.barranco\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/mayara.barranco/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/mayara.barranco/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\AdoptOpenJDK\jre-8.0.265.01-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\mayara.barranco\AppData\Local\Microsoft\WindowsApps;;C:\Users\mayara.barranco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mayara.barranco\AppData\Roaming\npm;C:\Program Files\Salesforce CLI\bin;C:\Users\mayara.barranco\OneDrive - COMPASSO TECNOLOGIA LTDA\Área de Trabalho;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=15.0.2+7-27, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.archive.scanner=org.hibernate.boot.archive.scan.internal.DisabledScanner, hibernate.connection.datasource=HikariDataSource (null), java.class.version=59.0}
+[2021-05-18 20:13:41.516] - 17732 DEBUG [restartedMain] --- org.hibernate.secure.spi.JaccIntegrator: Skipping JACC integration as it was not enabled
+[2021-05-18 20:13:41.518] - 17732 DEBUG [restartedMain] --- org.hibernate.internal.SessionFactoryImpl: Instantiated session factory
+[2021-05-18 20:13:41.518] - 17732 DEBUG [restartedMain] --- org.hibernate.type.spi.TypeConfiguration$Scope: Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@56d05734] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@43915edb]
+[2021-05-18 20:13:41.562] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Prontuario] is safe
+[2021-05-18 20:13:41.562] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Prontuario
+[2021-05-18 20:13:41.758] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Consulta] is safe
+[2021-05-18 20:13:41.758] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Consulta
+[2021-05-18 20:13:41.759] - 17732 INFO [restartedMain] --- org.hibernate.tuple.PojoInstantiator: HHH000182: No default (no-argument) constructor for class: br.com.resilire.model.Consulta (class must be instantiated by Interceptor)
+[2021-05-18 20:13:41.769] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Endereco] is safe
+[2021-05-18 20:13:41.769] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Endereco
+[2021-05-18 20:13:41.780] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Psicologo] is safe
+[2021-05-18 20:13:41.781] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Psicologo
+[2021-05-18 20:13:41.792] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Cidade] is safe
+[2021-05-18 20:13:41.792] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Cidade
+[2021-05-18 20:13:41.800] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Paciente] is safe
+[2021-05-18 20:13:41.800] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Paciente
+[2021-05-18 20:13:41.801] - 17732 INFO [restartedMain] --- org.hibernate.tuple.PojoInstantiator: HHH000182: No default (no-argument) constructor for class: br.com.resilire.model.Paciente (class must be instantiated by Interceptor)
+[2021-05-18 20:13:41.812] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Especialidade] is safe
+[2021-05-18 20:13:41.812] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Especialidade
+[2021-05-18 20:13:41.817] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: Not known whether passed class name [br.com.resilire.model.Uf] is safe
+[2021-05-18 20:13:41.817] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.internal.ClassLoaderAccessImpl: No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.resilire.model.Uf
+[2021-05-18 20:13:41.826] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Prontuario
+[2021-05-18 20:13:41.826] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_prontuario from prontuario where id_prontuario =?
+[2021-05-18 20:13:41.826] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select prontuario_.id_prontuario, prontuario_.id_paciente as id_pacie2_5_, prontuario_.observacao as observac3_5_, prontuario_.prescricao as prescric4_5_ from prontuario prontuario_ where prontuario_.id_prontuario=?
+[2021-05-18 20:13:41.827] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into prontuario (id_paciente, observacao, prescricao, id_prontuario) values (?, ?, ?, ?)
+[2021-05-18 20:13:41.827] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update prontuario set id_paciente=?, observacao=?, prescricao=? where id_prontuario=?
+[2021-05-18 20:13:41.827] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from prontuario where id_prontuario=?
+[2021-05-18 20:13:41.827] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into prontuario (id_paciente, observacao, prescricao) values (?, ?, ?)
+[2021-05-18 20:13:41.850] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@51c65020]
+[2021-05-18 20:13:41.850] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idPaciente
+[2021-05-18 20:13:41.851] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : observacao
+[2021-05-18 20:13:41.851] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : prescricao
+[2021-05-18 20:13:41.852] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.867] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.869] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Prontuario)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Prontuario, querySpaceUid=<gen:0>, path=br.com.resilire.model.Prontuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Prontuario)
+          - SQL table alias mapping - prontuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_pront1_5_0_}
+
+[2021-05-18 20:13:41.871] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Prontuario [NONE]: select prontuario0_.id_prontuario as id_pront1_5_0_, prontuario0_.id_paciente as id_pacie2_5_0_, prontuario0_.observacao as observac3_5_0_, prontuario0_.prescricao as prescric4_5_0_ from prontuario prontuario0_ where prontuario0_.id_prontuario=?
+[2021-05-18 20:13:41.871] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Consulta
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_consulta from consulta where id_consulta =?
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select consulta_.id_consulta, consulta_.data_consulta as data_con2_1_, consulta_.id_paciente as id_pacie3_1_, consulta_.id_prontuario as id_pront4_1_, consulta_.id_psicologo as id_psico5_1_ from consulta consulta_ where consulta_.id_consulta=?
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into consulta (data_consulta, id_paciente, id_prontuario, id_psicologo, id_consulta) values (?, ?, ?, ?, ?)
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update consulta set data_consulta=?, id_paciente=?, id_prontuario=?, id_psicologo=? where id_consulta=?
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from consulta where id_consulta=?
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into consulta (data_consulta, id_paciente, id_prontuario, id_psicologo) values (?, ?, ?, ?)
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@61fb91d0]
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : dataConsulta
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idPaciente
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idProntuario
+[2021-05-18 20:13:41.872] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idPsicologo
+[2021-05-18 20:13:41.873] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.873] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.873] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Consulta)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Consulta, querySpaceUid=<gen:0>, path=br.com.resilire.model.Consulta)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Consulta)
+          - SQL table alias mapping - consulta0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_consu1_1_0_}
+
+[2021-05-18 20:13:41.873] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Consulta [NONE]: select consulta0_.id_consulta as id_consu1_1_0_, consulta0_.data_consulta as data_con2_1_0_, consulta0_.id_paciente as id_pacie3_1_0_, consulta0_.id_prontuario as id_pront4_1_0_, consulta0_.id_psicologo as id_psico5_1_0_ from consulta consulta0_ where consulta0_.id_consulta=?
+[2021-05-18 20:13:41.873] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Endereco
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_endereco from endereco where id_endereco =?
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select endereco_.id_endereco, endereco_.bairro as bairro2_2_, endereco_.cep as cep3_2_, endereco_.complemento as compleme4_2_, endereco_.id_cidade as id_cidad5_2_, endereco_.id_uf as id_uf6_2_, endereco_.numero as numero7_2_, endereco_.rua as rua8_2_ from endereco endereco_ where endereco_.id_endereco=?
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into endereco (bairro, cep, complemento, id_cidade, id_uf, numero, rua, id_endereco) values (?, ?, ?, ?, ?, ?, ?, ?)
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update endereco set bairro=?, cep=?, complemento=?, id_cidade=?, id_uf=?, numero=?, rua=? where id_endereco=?
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from endereco where id_endereco=?
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into endereco (bairro, cep, complemento, id_cidade, id_uf, numero, rua) values (?, ?, ?, ?, ?, ?, ?)
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@24805aae]
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : bairro
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : cep
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : complemento
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idCidade
+[2021-05-18 20:13:41.874] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idUf
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : numero
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : rua
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Endereco)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Endereco, querySpaceUid=<gen:0>, path=br.com.resilire.model.Endereco)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Endereco)
+          - SQL table alias mapping - endereco0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_ender1_2_0_}
+
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Endereco [NONE]: select endereco0_.id_endereco as id_ender1_2_0_, endereco0_.bairro as bairro2_2_0_, endereco0_.cep as cep3_2_0_, endereco0_.complemento as compleme4_2_0_, endereco0_.id_cidade as id_cidad5_2_0_, endereco0_.id_uf as id_uf6_2_0_, endereco0_.numero as numero7_2_0_, endereco0_.rua as rua8_2_0_ from endereco endereco0_ where endereco0_.id_endereco=?
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Psicologo
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_psicologo from psicologo where id_psicologo =?
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select psicologo_.id_psicologo, psicologo_.crp as crp2_6_, psicologo_.email as email3_6_, psicologo_.id_endereco as id_ender4_6_, psicologo_.id_especialidade as id_espec5_6_, psicologo_.nome as nome6_6_, psicologo_.sobrenome as sobrenom7_6_, psicologo_.telefone as telefone8_6_ from psicologo psicologo_ where psicologo_.id_psicologo=?
+[2021-05-18 20:13:41.875] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into psicologo (crp, email, id_endereco, id_especialidade, nome, sobrenome, telefone, id_psicologo) values (?, ?, ?, ?, ?, ?, ?, ?)
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update psicologo set crp=?, email=?, id_endereco=?, id_especialidade=?, nome=?, sobrenome=?, telefone=? where id_psicologo=?
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from psicologo where id_psicologo=?
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into psicologo (crp, email, id_endereco, id_especialidade, nome, sobrenome, telefone) values (?, ?, ?, ?, ?, ?, ?)
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ce2cd87]
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : crp
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : email
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idEndereco
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idEspecialidade
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : nome
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : sobrenome
+[2021-05-18 20:13:41.876] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : telefone
+[2021-05-18 20:13:41.877] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Psicologo)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Psicologo, querySpaceUid=<gen:0>, path=br.com.resilire.model.Psicologo)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Psicologo)
+          - SQL table alias mapping - psicologo0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_psico1_6_0_}
+
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Psicologo [NONE]: select psicologo0_.id_psicologo as id_psico1_6_0_, psicologo0_.crp as crp2_6_0_, psicologo0_.email as email3_6_0_, psicologo0_.id_endereco as id_ender4_6_0_, psicologo0_.id_especialidade as id_espec5_6_0_, psicologo0_.nome as nome6_6_0_, psicologo0_.sobrenome as sobrenom7_6_0_, psicologo0_.telefone as telefone8_6_0_ from psicologo psicologo0_ where psicologo0_.id_psicologo=?
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Cidade
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_cidade from cidade where id_cidade =?
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select cidade_.id_cidade, cidade_.id_uf as id_uf2_0_, cidade_.nome as nome3_0_ from cidade cidade_ where cidade_.id_cidade=?
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into cidade (id_uf, nome, id_cidade) values (?, ?, ?)
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update cidade set id_uf=?, nome=? where id_cidade=?
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from cidade where id_cidade=?
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into cidade (id_uf, nome) values (?, ?)
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@616b7ec5]
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idUf
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : nome
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.878] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.879] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Cidade)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Cidade, querySpaceUid=<gen:0>, path=br.com.resilire.model.Cidade)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Cidade)
+          - SQL table alias mapping - cidade0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_cidad1_0_0_}
+
+[2021-05-18 20:13:41.879] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Cidade [NONE]: select cidade0_.id_cidade as id_cidad1_0_0_, cidade0_.id_uf as id_uf2_0_0_, cidade0_.nome as nome3_0_0_ from cidade cidade0_ where cidade0_.id_cidade=?
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Paciente
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_paciente from paciente where id_paciente =?
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select paciente_.id_paciente, paciente_.cpf as cpf2_4_, paciente_.email as email3_4_, paciente_.id_endereco as id_ender4_4_, paciente_.nome as nome5_4_, paciente_.sexo as sexo6_4_, paciente_.sobrenome as sobrenom7_4_, paciente_.telefone as telefone8_4_ from paciente paciente_ where paciente_.id_paciente=?
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into paciente (cpf, email, id_endereco, nome, sexo, sobrenome, telefone, id_paciente) values (?, ?, ?, ?, ?, ?, ?, ?)
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update paciente set cpf=?, email=?, id_endereco=?, nome=?, sexo=?, sobrenome=?, telefone=? where id_paciente=?
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from paciente where id_paciente=?
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into paciente (cpf, email, id_endereco, nome, sexo, sobrenome, telefone) values (?, ?, ?, ?, ?, ?, ?)
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1f3a9f6b]
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : cpf
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : email
+[2021-05-18 20:13:41.880] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : idEndereco
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : nome
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : sexo
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : sobrenome
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : telefone
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Paciente)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Paciente, querySpaceUid=<gen:0>, path=br.com.resilire.model.Paciente)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Paciente)
+          - SQL table alias mapping - paciente0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_pacie1_4_0_}
+
+[2021-05-18 20:13:41.881] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Paciente [NONE]: select paciente0_.id_paciente as id_pacie1_4_0_, paciente0_.cpf as cpf2_4_0_, paciente0_.email as email3_4_0_, paciente0_.id_endereco as id_ender4_4_0_, paciente0_.nome as nome5_4_0_, paciente0_.sexo as sexo6_4_0_, paciente0_.sobrenome as sobrenom7_4_0_, paciente0_.telefone as telefone8_4_0_ from paciente paciente0_ where paciente0_.id_paciente=?
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Especialidade
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_especialidade from especialidade where id_especialidade =?
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select especialid_.id_especialidade, especialid_.nome as nome2_3_ from especialidade especialid_ where especialid_.id_especialidade=?
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into especialidade (nome, id_especialidade) values (?, ?)
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update especialidade set nome=? where id_especialidade=?
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from especialidade where id_especialidade=?
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into especialidade (nome) values (?)
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@224f0839]
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : nome
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.882] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.883] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Especialidade)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Especialidade, querySpaceUid=<gen:0>, path=br.com.resilire.model.Especialidade)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Especialidade)
+          - SQL table alias mapping - especialid0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_espec1_3_0_}
+
+[2021-05-18 20:13:41.883] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Especialidade [NONE]: select especialid0_.id_especialidade as id_espec1_3_0_, especialid0_.nome as nome2_3_0_ from especialidade especialid0_ where especialid0_.id_especialidade=?
+[2021-05-18 20:13:41.883] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister: Static SQL for entity: br.com.resilire.model.Uf
+[2021-05-18 20:13:41.883] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Version select: select id_uf from uf where id_uf =?
+[2021-05-18 20:13:41.883] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Snapshot select: select uf_.id_uf, uf_.nome as nome2_7_ from uf uf_ where uf_.id_uf=?
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Insert 0: insert into uf (nome, id_uf) values (?, ?)
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Update 0: update uf set nome=? where id_uf=?
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Delete 0: delete from uf where id_uf=?
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.entity.AbstractEntityPersister:  Identity insert: insert into uf (nome) values (?)
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl: Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6bccef9c]
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.persister.walking.spi.MetamodelGraphWalker: Visiting attribute path : nome
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy: Building LoadPlan...
+[2021-05-18 20:13:41.884] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor: processing queryspace <gen:0>
+[2021-05-18 20:13:41.886] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter: LoadPlan(entity=br.com.resilire.model.Uf)
+    - Returns
+       - EntityReturnImpl(entity=br.com.resilire.model.Uf, querySpaceUid=<gen:0>, path=br.com.resilire.model.Uf)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.resilire.model.Uf)
+          - SQL table alias mapping - uf0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_uf1_7_0_}
+
+[2021-05-18 20:13:41.886] - 17732 DEBUG [restartedMain] --- org.hibernate.loader.entity.plan.EntityLoader: Static select for entity br.com.resilire.model.Uf [NONE]: select uf0_.id_uf as id_uf1_7_0_, uf0_.nome as nome2_7_0_ from uf uf0_ where uf0_.id_uf=?
+[2021-05-18 20:13:46.998] - 17732 DEBUG [restartedMain] --- org.hibernate.engine.jdbc.spi.SqlExceptionHelper: Unable to open JDBC Connection for DDL execution [n/a]
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:333)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at br.com.resilire.ResilireApplication.main(ResilireApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+	... 54 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 57 more
+
+[2021-05-18 20:13:47.002] - 17732 WARN [restartedMain] --- org.hibernate.engine.jdbc.spi.SqlExceptionHelper: SQL Error: 0, SQLState: 08S01
+[2021-05-18 20:13:47.003] - 17732 ERROR [restartedMain] --- org.hibernate.engine.jdbc.spi.SqlExceptionHelper: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2021-05-18 20:13:47.008] - 17732 DEBUG [restartedMain] --- org.hibernate.internal.SessionFactoryImpl: HHH000031: Closing
+[2021-05-18 20:13:47.009] - 17732 DEBUG [restartedMain] --- org.hibernate.internal.SessionFactoryRegistry: Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@6aa36b94
+[2021-05-18 20:13:47.009] - 17732 DEBUG [restartedMain] --- org.hibernate.type.spi.TypeConfiguration$Scope: Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@15fdaf48] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@43915edb]
+[2021-05-18 20:13:47.012] - 17732 DEBUG [restartedMain] --- org.hibernate.service.internal.AbstractServiceRegistryImpl: Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[2021-05-18 20:13:47.013] - 17732 DEBUG [restartedMain] --- org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl: Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+[2021-05-18 20:13:47.015] - 17732 INFO [restartedMain] --- org.apache.catalina.core.StandardService: Stopping service [Tomcat]

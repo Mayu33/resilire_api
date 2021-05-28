@@ -1,6 +1,8 @@
 package br.com.resilire.controller.dto;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
 
@@ -14,10 +16,11 @@ public class EnderecoDto {
 	private String numero;
 	private String complemento;
 	private String bairro;
-	private Long idCidade;
-	private Long idUf;
+	private String cidade;
+	private String uf;
 	
 	
+
 	public EnderecoDto(Endereco endereco) {
 		this.idEndereco = endereco.getIdEndereco();
 		this.cep = endereco.getCep();
@@ -25,9 +28,8 @@ public class EnderecoDto {
 		this.numero = endereco.getNumero();
 		this.complemento = endereco.getComplemento();
 		this.bairro = endereco.getBairro();
-		this.idCidade = endereco.getIdCidade();
-		this.idUf = endereco.getIdUf();
-		
+		this.cidade = endereco.getCidade();
+		this.uf = endereco.getUf();
 	}
 	
 	
@@ -67,25 +69,34 @@ public class EnderecoDto {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public Long getIdCidade() {
-		return idCidade;
-	}
-	public void setIdCidade(Long idCidade) {
-		this.idCidade = idCidade;
-	}
-	public Long getIdUf() {
-		return idUf;
-	}
-	public void setIdUf(Long idUf) {
-		this.idUf = idUf;
-	}
+
 	
+	public String getCidade() {
+		return cidade;
+	}
+
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+
+	public String getUf() {
+		return uf;
+	}
+
+
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+
+
 	public static Page<EnderecoDto> converterPage(Page<Endereco> enderecos) {
 		return enderecos.map(EnderecoDto::new);
 	}
 	
-	public static Optional<EnderecoDto> converterOptional(Optional<Endereco> enderecos) {
-		return enderecos.map(EnderecoDto::new);
+	public static List<EnderecoDto> converterOptional(Optional<Endereco> enderecos) {
+		return enderecos.stream().map(EnderecoDto::new).collect(Collectors.toList());
 	}
 	
 }

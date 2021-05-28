@@ -1,64 +1,38 @@
-package br.com.resilire.model;
+package br.com.resilire.controller.dto;
 
-import java.io.Serializable;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table; 
+import org.springframework.data.domain.Page;
 
+import br.com.resilire.model.Endereco;
+import br.com.resilire.model.Paciente;
 
-@Entity
-@Table(name="Paciente")
-public class Paciente implements Serializable{
+public class PacienteDto {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name="idPaciente")
 	private Long idPaciente;
-	@Column(name="cpf")
 	private String cpf;
-	@Column(name="sexo")
 	private String sexo;
-	@Column(name="nome")
 	private String nome;
-	@Column(name="sobrenome")
 	private String sobrenome;
-	@Column(name="email")
 	private String email;
-	@Column(name="telefone")
 	private String telefone;
-	@Column(name="idEndereco")
 	private Long idEndereco;
 	
 	
-	public Paciente() {
+	public PacienteDto(Paciente paciente) {
 		super();
-	}
-
-
-	public Paciente(String cpf, Long idPaciente, String sexo, String nome, String sobrenome, String email,
-			String telefone, Long idEndereco) {
-		super();
-		this.cpf = cpf;
-		this.idPaciente = idPaciente;
-		this.sexo = sexo;
-		this.nome = nome;
-		this.sobrenome = sobrenome;
-		this.email = email;
-		this.telefone = telefone;
-		this.idEndereco = idEndereco;
+		this.idPaciente = paciente.getIdPaciente();
+		this.cpf = paciente.getCpf();
+		this.sexo = paciente.getSexo();
+		this.nome = paciente.getNome();
+		this.sobrenome = paciente.getSobrenome();
+		this.email = paciente.getEmail();
+		this.telefone = paciente.getTelefone();
+		this.idEndereco = paciente.getIdEndereco();
 	}
 	
-	
-
-
-
 	public Long getIdPaciente() {
 		return idPaciente;
 	}
@@ -71,7 +45,6 @@ public class Paciente implements Serializable{
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-
 	public String getSexo() {
 		return sexo;
 	}
@@ -109,7 +82,13 @@ public class Paciente implements Serializable{
 		this.idEndereco = idEndereco;
 	}
 	
+	public static List<PacienteDto> converterList(List<Paciente> pacientes){
+		return pacientes.stream().map(PacienteDto::new).collect(Collectors.toList());
+	}
 	
+	public static List<PacienteDto> converterOptional(Optional<Paciente> pacientes) {
+		return pacientes.stream().map(PacienteDto::new).collect(Collectors.toList());
+	}
 	
 	
 	

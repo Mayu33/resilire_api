@@ -1,0 +1,27 @@
+version: '3'
+services:
+    resilire:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        image: resilire/api
+        ports:
+            - '8080:8080'
+            - '5005:5005'
+        environment:
+            - ADDITIONAL_OPTS= -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xmx16 -Xms128m -XX:MaxMetaspaceSize=128m
+            - PROFILE=dev
+        links:
+            - db
+
+    db:
+        image: mysql:latest
+        ports:
+            - '3303:3306'
+        environment:
+            - MYSQL_ROOT_HOST=%
+            - MYSQL_DATABASE=resilire
+            - MYSQL_USER=resilire
+            - MYSQL_ROOT_PASSWORD=resiliresenha123
+        volumes:
+            - ./docker/volume_mysql:/var/lib/mysql
