@@ -33,8 +33,6 @@ public class Paciente implements Serializable{
 	private String email;
 	@Column(name="telefone")
 	private String telefone;
-	@Column(name="idEndereco")
-	private Long idEndereco;
 	
 	
 	public Paciente() {
@@ -43,7 +41,7 @@ public class Paciente implements Serializable{
 
 
 	public Paciente(String cpf, Long idPaciente, String sexo, String nome, String sobrenome, String email,
-			String telefone, Long idEndereco) {
+			String telefone) {
 		super();
 		this.cpf = cpf;
 		this.idPaciente = idPaciente;
@@ -52,7 +50,6 @@ public class Paciente implements Serializable{
 		this.sobrenome = sobrenome;
 		this.email = email;
 		this.telefone = telefone;
-		this.idEndereco = idEndereco;
 	}
 	
 	
@@ -102,12 +99,7 @@ public class Paciente implements Serializable{
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	public Long getIdEndereco() {
-		return idEndereco;
-	}
-	public void setIdEndereco(Long idEndereco) {
-		this.idEndereco = idEndereco;
-	}
+
 	
 	
 	

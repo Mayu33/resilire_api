@@ -23,33 +23,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.resilire.controller.dto.ConsultaDto;
 import br.com.resilire.controller.dto.PacienteDto;
+import br.com.resilire.model.Consulta;
 import br.com.resilire.model.Paciente;
-import br.com.resilire.service.PacienteService;
+import br.com.resilire.service.ConsultaService;
 import io.swagger.annotations.Api;
 
 @RestController
-@RequestMapping("/paciente")
-@Api(value="API REST Pacientes")
+@RequestMapping("/consulta")
+@Api(value="API REST Consultas")
 @CrossOrigin(origins="*")
-public class PacienteController {
+public class ConsultaController {
 	
-	private final static Logger logger = LoggerFactory.getLogger(PacienteController.class);
+	private final static Logger logger = LoggerFactory.getLogger(ConsultaController.class);
 
-	
 	@Autowired
-	PacienteService service;
+	ConsultaService service;
 	
-	
-	@GetMapping("/{idPaciente}")
-	public ResponseEntity<List<PacienteDto>> findById(@PathVariable("idPaciente") Long id, Model model) {
+	@GetMapping("/{idConsulta}")
+	public ResponseEntity<List<ConsultaDto>> findById(@PathVariable("idConsulta") Long id, Model model) {
 
 		try {
-			List<PacienteDto> dto = PacienteDto.converterOptional(service.findById(id));
-			logger.debug("Request Pacientes por ID");
+			List<ConsultaDto> dto = ConsultaDto.converterOptional(service.findById(id));
+			logger.debug("Request Consulta por ID");
 			return new ResponseEntity<>(dto, HttpStatus.OK);
 		} catch (SQLException e) {
-			logger.debug("Problema ao acessar a lista de pacientes");
+			logger.debug("Problema ao acessar a lista de consultas");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
@@ -57,23 +57,21 @@ public class PacienteController {
 
 	@PutMapping("/{id}")
 	@Transactional
-	public ResponseEntity<PacienteDto> atualizar(@PathVariable Long id, @RequestBody @Validated Paciente p) throws SQLException {
+	public ResponseEntity<ConsultaDto> atualizar(@PathVariable Long id, @RequestBody @Validated Consulta c) throws SQLException {
 
-		Optional<Paciente> edit = service.findById(id);
+		Optional<Consulta> edit = service.findById(id);
 		if(edit.isPresent()) {
-			Paciente pac = edit.get();
-			pac.setIdPaciente(p.getIdPaciente());
-			pac.setCpf(p.getCpf());
-			pac.setSexo(p.getSexo());
-			pac.setNome(p.getNome());
-			pac.setSobrenome(p.getSobrenome());
-			pac.setEmail(p.getEmail());
-			pac.setTelefone(p.getTelefone());
-			service.save(pac);
-			logger.debug("Paciente atualizado com sucesso");
-			return new ResponseEntity<>(new PacienteDto(pac), HttpStatus.OK);
+			Consulta con = edit.get();
+			con.setIdConsulta(c.getIdConsulta());
+			con.setIdPaciente(c.getIdPaciente());
+			con.setIdPsicologo(c.getIdPsicologo());
+			con.setIdProntuario(c.getIdProntuario());
+			con.setDataConsulta(c.getDataConsulta());
+			service.save(con);
+			logger.debug("Consulta atualizada com sucesso");
+			return new ResponseEntity<>(new ConsultaDto(con), HttpStatus.OK);
 		} else {
-			logger.debug("Erro ao atualizar paciente");
+			logger.debug("Erro ao atualizar consulta");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
@@ -84,16 +82,16 @@ public class PacienteController {
 
 	@PostMapping("/")
 	@Transactional
-	public ResponseEntity<PacienteDto> cadastrar(@RequestBody @Validated Paciente paciente) {
+	public ResponseEntity<ConsultaDto> cadastrar(@RequestBody @Validated Consulta consulta) {
 
 		try {
 			
-			PacienteDto dto = new PacienteDto(service.save(paciente));
-			logger.debug("Paciente cadastrado com sucesso");
+			ConsultaDto dto = new ConsultaDto(service.save(consulta));
+			logger.debug("Consulta cadastrada com sucesso");
 			return new ResponseEntity<>(dto, HttpStatus.CREATED);
 
 		} catch (SQLException ex) {
-			logger.debug("Erro ao cadastrar paciente");
+			logger.debug("Erro ao cadastrar consulta");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 			
 			
@@ -102,32 +100,33 @@ public class PacienteController {
 	
 	@DeleteMapping("/{id}")
 	@Transactional
-	public ResponseEntity<PacienteDto> delete(@PathVariable Long id){
+	public ResponseEntity<ConsultaDto> delete(@PathVariable Long id){
 		
 		try {
 		service.deleteById(id);
 		return new ResponseEntity<>(HttpStatus.OK);
 		
 		} catch (SQLException ex) {
-			logger.debug("Erro ao deletar paciente");
+			logger.debug("Erro ao deletar consulta");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 	
 	@GetMapping("/")
 	@Transactional
-	public ResponseEntity<List<PacienteDto>> findAll(){
+	public ResponseEntity<List<ConsultaDto>> findAll(){
 		try {
-			List<PacienteDto> pacientes = PacienteDto.converterList(service.list());
-			logger.debug("Listando todos os pacientes");
-			return new ResponseEntity<>(pacientes, HttpStatus.OK);
+			List<ConsultaDto> consultas = ConsultaDto.converterList(service.list());
+			logger.debug("Listando todas as consultas");
+			return new ResponseEntity<>(consultas, HttpStatus.OK);
 			
 			
 		}catch (SQLException ex){
-			logger.debug("Erro ao listar todos os pacientes");
+			logger.debug("Erro ao listar todas as consultas");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		
 	}
+	
 	
 }

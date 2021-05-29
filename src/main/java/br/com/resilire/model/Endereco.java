@@ -20,8 +20,12 @@ public class Endereco implements Serializable{
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name="idEndereco")
 	private Long idEndereco;
-	@Column(name="cep")
+	@Column(name="idPaciente")
+	private Long idPaciente;
+	@Column(name="cep")	
 	private String cep;
+	@Column(name="apelido")
+	private String apelido;
 	@Column(name="rua")
 	private String rua;
 	@Column(name="numero")
@@ -43,8 +47,10 @@ public class Endereco implements Serializable{
 
 	
 
-	public Endereco(String cep, String rua, String numero, String complemento, String bairro, String cidade, String uf) {
+	public Endereco(Long idPaciente, String apelido, String cep, String rua, String numero, String complemento, String bairro, String cidade, String uf) {
 		super();
+		this.idPaciente = idPaciente;
+		this.apelido = apelido;
 		this.cep = cep;
 		this.rua = rua;
 		this.numero = numero;
@@ -52,6 +58,19 @@ public class Endereco implements Serializable{
 		this.bairro = bairro;
 		this.cidade = cidade;
 		this.uf = uf;
+	}
+
+
+
+	
+	public Long getIdPaciente() {
+		return idPaciente;
+	}
+
+
+
+	public void setIdPaciente(Long idPaciente) {
+		this.idPaciente = idPaciente;
 	}
 
 
@@ -117,6 +136,19 @@ public class Endereco implements Serializable{
 		this.uf = uf;
 	}
 
+
+
+	public String getApelido() {
+		return apelido;
+	}
+
+
+
+	public void setApelido(String apelido) {
+		this.apelido = apelido;
+	}
+
+	
 	
 	
 	

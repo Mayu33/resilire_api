@@ -18,7 +18,6 @@ public class PacienteDto {
 	private String sobrenome;
 	private String email;
 	private String telefone;
-	private Long idEndereco;
 	
 	
 	public PacienteDto(Paciente paciente) {
@@ -30,7 +29,6 @@ public class PacienteDto {
 		this.sobrenome = paciente.getSobrenome();
 		this.email = paciente.getEmail();
 		this.telefone = paciente.getTelefone();
-		this.idEndereco = paciente.getIdEndereco();
 	}
 	
 	public Long getIdPaciente() {
@@ -75,13 +73,7 @@ public class PacienteDto {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	public Long getIdEndereco() {
-		return idEndereco;
-	}
-	public void setIdEndereco(Long idEndereco) {
-		this.idEndereco = idEndereco;
-	}
-	
+
 	public static List<PacienteDto> converterList(List<Paciente> pacientes){
 		return pacientes.stream().map(PacienteDto::new).collect(Collectors.toList());
 	}
