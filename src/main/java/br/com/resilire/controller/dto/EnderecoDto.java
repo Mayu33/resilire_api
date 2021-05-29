@@ -4,14 +4,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.springframework.data.domain.Page;
 
 import br.com.resilire.model.Endereco;
 
 public class EnderecoDto {
 
 	private Long idEndereco;
-	private Long idPaciente;
+	private Long idUser;
 	private String apelido;
 	private String cep;
 	private String rua;
@@ -25,7 +24,7 @@ public class EnderecoDto {
 
 	public EnderecoDto(Endereco endereco) {
 		this.idEndereco = endereco.getIdEndereco();
-		this.idPaciente = endereco.getIdEndereco();
+		this.idUser = endereco.getIdUser();
 		this.apelido = endereco.getApelido();
 		this.cep = endereco.getCep();
 		this.rua = endereco.getRua();
@@ -38,17 +37,13 @@ public class EnderecoDto {
 	
 	
 	
-	public Long getIdPaciente() {
-		return idPaciente;
+	public Long getIdUser() {
+		return idUser;
 	}
 
-
-
-	public void setIdPaciente(Long idPaciente) {
-		this.idPaciente = idPaciente;
+	public void setIdUser(Long idUser) {
+		this.idUser = idUser;
 	}
-
-
 
 	public Long getIdEndereco() {
 		return idEndereco;
@@ -118,8 +113,8 @@ public class EnderecoDto {
 	}
 
 
-	public static Page<EnderecoDto> converterPage(Page<Endereco> enderecos) {
-		return enderecos.map(EnderecoDto::new);
+	public static List<EnderecoDto> converterList(List<Endereco> enderecos) {
+		return enderecos.stream().map(EnderecoDto::new).collect(Collectors.toList());
 	}
 	
 	public static List<EnderecoDto> converterOptional(Optional<Endereco> enderecos) {

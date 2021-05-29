@@ -54,6 +54,20 @@ public class EnderecoController {
 		}
 
 	}
+	
+	@GetMapping("/user/{idUser}")
+	public ResponseEntity<List<EnderecoDto>> findByIdUser(@PathVariable("idUser") Long id, Model model) {
+
+		try {
+			List<EnderecoDto> enderecoDto = EnderecoDto.converterList(enderecoService.findByIdUser(id));
+			logger.debug("Request Enderecos por ID");
+			return new ResponseEntity<>(enderecoDto, HttpStatus.OK);
+		} catch (SQLException e) {
+			logger.debug("Problema ao acessar a lista de enderecos");
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+	}
 
 	@PutMapping("/{id}")
 	@Transactional

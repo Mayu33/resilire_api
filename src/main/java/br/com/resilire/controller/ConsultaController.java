@@ -52,6 +52,34 @@ public class ConsultaController {
 		}
 
 	}
+	
+	@GetMapping("/paciente/{idPaciente}")
+	public ResponseEntity<List<ConsultaDto>> findByIdPaciente(@PathVariable("idPaciente") Long id, Model model) {
+
+		try {
+			List<ConsultaDto> dto = ConsultaDto.converterList(service.findByIdPaciente(id));
+			logger.debug("Request Consulta por ID do Paciente");
+			return new ResponseEntity<>(dto, HttpStatus.OK);
+		} catch (SQLException e) {
+			logger.debug("Problema ao acessar a lista de consultas");
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+	}
+	
+	@GetMapping("/psicologo/{idPsicologo}")
+	public ResponseEntity<List<ConsultaDto>> findByIdPsicologo(@PathVariable("idPsicologo") Long id, Model model) {
+
+		try {
+			List<ConsultaDto> dto = ConsultaDto.converterList(service.findByIdPsicologo(id));
+			logger.debug("Request Consulta por ID do Psicologo");
+			return new ResponseEntity<>(dto, HttpStatus.OK);
+		} catch (SQLException e) {
+			logger.debug("Problema ao acessar a lista de consultas");
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+	}
 
 	@PutMapping("/{id}")
 	@Transactional

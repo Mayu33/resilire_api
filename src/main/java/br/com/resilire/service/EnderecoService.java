@@ -19,6 +19,6 @@ public interface EnderecoService {
 	
 	public List<Endereco> list() throws SQLException;
 
-	
+	public List<Endereco> findByIdUser(Long idUser) throws SQLException;
 
 }

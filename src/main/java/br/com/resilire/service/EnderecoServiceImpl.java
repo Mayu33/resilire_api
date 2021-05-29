@@ -51,6 +51,13 @@ public class EnderecoServiceImpl implements EnderecoService{
 	public List<Endereco> list() throws SQLException {
 		return enderecoRepository.findAll();
 	}
+
+
+	@Override
+	public List<Endereco> findByIdUser(Long idUser) throws SQLException {
+		// TODO Auto-generated method stub
+		return enderecoRepository.findByIdUser(idUser);
+	}
 	
 	
 }

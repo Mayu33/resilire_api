@@ -41,4 +41,16 @@ public class ConsultaServiceImpl implements ConsultaService {
 		return repository.findAll();
 	}
 
+	@Override
+	public List<Consulta> findByIdPaciente(Long idPaciente) throws SQLException {
+		// TODO Auto-generated method stub
+		return repository.findByIdPaciente(idPaciente);
+	}
+
+	@Override
+	public List<Consulta> findByIdPsicologo(Long idPsicologo) throws SQLException {
+		// TODO Auto-generated method stub
+		return repository.findByIdPsicologo(idPsicologo);
+	}
+
 }

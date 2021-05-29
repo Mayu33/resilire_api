@@ -15,4 +15,8 @@ public interface ConsultaService {
 	public void deleteById(Long idConsulta) throws SQLException;
 	
 	public List<Consulta> list() throws SQLException;
+	
+	public List<Consulta> findByIdPaciente(Long idPaciente) throws SQLException;
+	
+	public List<Consulta> findByIdPsicologo(Long idPsicologo) throws SQLException;
 }
