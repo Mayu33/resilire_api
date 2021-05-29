@@ -15,4 +15,6 @@ public interface ProntuarioService {
 	public void deleteById(Long idProntuario) throws SQLException;
 	
 	public List<Prontuario> list() throws SQLException;
+	
+	public List<Prontuario> findByIdPaciente(Long idPaciente) throws SQLException;
 }

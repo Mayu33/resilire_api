@@ -24,9 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.resilire.controller.dto.ConsultaDto;
-import br.com.resilire.controller.dto.PacienteDto;
 import br.com.resilire.model.Consulta;
-import br.com.resilire.model.Paciente;
 import br.com.resilire.service.ConsultaService;
 import io.swagger.annotations.Api;
 
@@ -127,6 +125,8 @@ public class ConsultaController {
 		}
 		
 	}
+	
+	
 	
 	
 }
