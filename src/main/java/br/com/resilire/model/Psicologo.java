@@ -28,8 +28,6 @@ public class Psicologo implements Serializable{
 	private String email;
 	@Column(name="telefone")
 	private String telefone;
-	@Column(name="idEndereco")
-	private Long idEndereco;
 	@Column(name="especialidade")
 	private String especialidade;
 	
@@ -38,7 +36,7 @@ public class Psicologo implements Serializable{
 		super();
 	}
 
-	public Psicologo(String crp, String nome, String sobrenome, String email, String telefone, Long idEndereco,
+	public Psicologo(String crp, String nome, String sobrenome, String email, String telefone, 
 			String especialidade) {
 		super();
 		this.crp = crp;
@@ -46,7 +44,6 @@ public class Psicologo implements Serializable{
 		this.sobrenome = sobrenome;
 		this.email = email;
 		this.telefone = telefone;
-		this.idEndereco = idEndereco;
 		this.especialidade = especialidade;
 	}
 	
@@ -85,12 +82,6 @@ public class Psicologo implements Serializable{
 	}
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-	public Long getIdEndereco() {
-		return idEndereco;
-	}
-	public void setIdEndereco(Long idEndereco) {
-		this.idEndereco = idEndereco;
 	}
 
 	public String getEspecialidade() {

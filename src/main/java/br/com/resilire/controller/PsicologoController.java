@@ -68,7 +68,6 @@ private final static Logger logger = LoggerFactory.getLogger(PacienteController.
 			pac.setSobrenome(p.getSobrenome());
 			pac.setEmail(p.getEmail());
 			pac.setTelefone(p.getTelefone());
-			pac.setIdEndereco(p.getIdEndereco());
 			pac.setEspecialidade(p.getEspecialidade());
 			service.save(pac);
 			logger.debug("Psicologo atualizado com sucesso");

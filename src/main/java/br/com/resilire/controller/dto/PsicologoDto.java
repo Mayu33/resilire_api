@@ -14,7 +14,6 @@ public class PsicologoDto {
 	private String sobrenome;
 	private String email;
 	private String telefone;
-	private Long idEndereco;
 	private String especialidade;
 	
 	
@@ -31,7 +30,6 @@ public class PsicologoDto {
 		this.sobrenome = p.getSobrenome();
 		this.email = p.getEmail();
 		this.telefone = p.getTelefone();
-		this.idEndereco = p.getIdEndereco();
 		this.especialidade = p.getEspecialidade();
 	}
 
@@ -95,15 +93,6 @@ public class PsicologoDto {
 		this.telefone = telefone;
 	}
 
-
-	public Long getIdEndereco() {
-		return idEndereco;
-	}
-
-
-	public void setIdEndereco(Long idEndereco) {
-		this.idEndereco = idEndereco;
-	}
 
 
 	public String getEspecialidade() {
