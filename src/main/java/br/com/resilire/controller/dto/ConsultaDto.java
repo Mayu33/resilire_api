@@ -16,7 +16,6 @@ public class ConsultaDto {
 	private Long idProntuario;
 	
 	
-	
 	public ConsultaDto(Consulta consulta) {
 		super();
 		this.idConsulta = consulta.getIdConsulta();
@@ -27,12 +26,10 @@ public class ConsultaDto {
 		this.idProntuario = consulta.getIdProntuario();
 	}
 			
-	
-	
+
 	public String getStatus() {
 		return status;
 	}
-
 
 
 	public void setStatus(String status) {
