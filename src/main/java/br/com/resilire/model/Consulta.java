@@ -23,6 +23,7 @@ public class Consulta implements Serializable{
 	private Long idPaciente;
 	private Long idPsicologo;
 	private String dataConsulta;
+	private String status;
 	private Long idProntuario;
 	
 	
@@ -33,20 +34,26 @@ public class Consulta implements Serializable{
 	}
 
 
-	public Consulta(Long idPaciente, Long idPsicologo, String dataConsulta, Long idProntuario) {
+	public Consulta(Long idPaciente, Long idPsicologo, String dataConsulta, String status, Long idProntuario) {
 		super();
 		this.idPaciente = idPaciente;
 		this.idPsicologo = idPsicologo;
 		this.dataConsulta = dataConsulta;
+		this.status = status;
 		this.idProntuario = idProntuario;
 	}
 
 
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public Long getIdConsulta() {
 		return idConsulta;
 	}
-
-
 	public void setIdConsulta(Long idConsulta) {
 		this.idConsulta = idConsulta;
 	}

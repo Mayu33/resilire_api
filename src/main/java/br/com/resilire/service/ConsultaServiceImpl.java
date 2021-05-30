@@ -53,4 +53,12 @@ public class ConsultaServiceImpl implements ConsultaService {
 		return repository.findByIdPsicologo(idPsicologo);
 	}
 
+	@Override
+	public List<Consulta> findByStatus(String status) throws SQLException {
+		// TODO Auto-generated method stub
+		return repository.findByStatus(status);
+	}
+	
+	
+
 }

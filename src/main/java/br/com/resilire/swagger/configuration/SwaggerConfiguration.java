@@ -27,7 +27,7 @@ public class SwaggerConfiguration {
 
 	private ApiInfo getApiInfo() {
 
-		return new ApiInfoBuilder().title("Produto API").description("Esta API cria, edita, deleta e lista novos produtos.")
+		return new ApiInfoBuilder().title("Resilire API").description("Esta API cria, edita, deleta e lista cadastros de pacientes, psicologos, consultas e prontuarios.")
 				.version("1.0.0").build();
 	}
 }

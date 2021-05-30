@@ -13,4 +13,6 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long>{
 	public List<Consulta> findByIdPaciente(Long idPaciente);
 	
 	public List<Consulta> findByIdPsicologo(Long idPsicologo);
+	
+	public List<Consulta> findByStatus(String status);
 }

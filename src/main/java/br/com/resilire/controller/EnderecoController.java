@@ -52,15 +52,27 @@ public class EnderecoController {
 			logger.debug("Problema ao acessar a lista de enderecos");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-
 	}
 	
-	@GetMapping("/user/{idUser}")
-	public ResponseEntity<List<EnderecoDto>> findByIdUser(@PathVariable("idUser") Long id, Model model) {
+	@GetMapping("/paciente/{idPaciente}")
+	public ResponseEntity<List<EnderecoDto>> findByIdPaciente(@PathVariable("idPaciente") Long id, Model model) {
 
 		try {
-			List<EnderecoDto> enderecoDto = EnderecoDto.converterList(enderecoService.findByIdUser(id));
-			logger.debug("Request Enderecos por ID");
+			List<EnderecoDto> enderecoDto = EnderecoDto.converterList(enderecoService.findByIdPaciente(id));
+			logger.debug("Request Enderecos por ID Paciente");
+			return new ResponseEntity<>(enderecoDto, HttpStatus.OK);
+		} catch (SQLException e) {
+			logger.debug("Problema ao acessar a lista de enderecos");
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	@GetMapping("/psicologo/{idPsicologo}")
+	public ResponseEntity<List<EnderecoDto>> findByIdPsicologo(@PathVariable("idPsicologo") Long id, Model model) {
+
+		try {
+			List<EnderecoDto> enderecoDto = EnderecoDto.converterList(enderecoService.findByIdPsicologo(id));
+			logger.debug("Request Enderecos por ID Psicologo");
 			return new ResponseEntity<>(enderecoDto, HttpStatus.OK);
 		} catch (SQLException e) {
 			logger.debug("Problema ao acessar a lista de enderecos");

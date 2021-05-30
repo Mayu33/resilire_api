@@ -12,6 +12,7 @@ public class ConsultaDto {
 	private Long idPaciente;
 	private Long idPsicologo;
 	private String dataConsulta;
+	private String status;
 	private Long idProntuario;
 	
 	
@@ -22,9 +23,24 @@ public class ConsultaDto {
 		this.idPaciente = consulta.getIdPaciente();
 		this.idPsicologo = consulta.getIdPsicologo();
 		this.dataConsulta = consulta.getDataConsulta();
+		this.status = consulta.getStatus();
 		this.idProntuario = consulta.getIdProntuario();
 	}
 			
+	
+	
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+
 	public Long getIdConsulta() {
 		return idConsulta;
 	}

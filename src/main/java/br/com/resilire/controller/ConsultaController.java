@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.resilire.controller.dto.ConsultaDto;
@@ -48,6 +49,20 @@ public class ConsultaController {
 			return new ResponseEntity<>(dto, HttpStatus.OK);
 		} catch (SQLException e) {
 			logger.debug("Problema ao acessar a lista de consultas");
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+	}
+	
+	@GetMapping("/{status}")
+	public ResponseEntity<List<ConsultaDto>> findByStatus(@RequestParam(value="status") String status, Model model) {
+
+		try {
+			List<ConsultaDto> dto = ConsultaDto.converterList(service.findByStatus(status));
+			logger.debug("Request Consulta por Status");
+			return new ResponseEntity<>(dto, HttpStatus.OK);
+		} catch (SQLException e) {
+			logger.debug("Problema ao acessar a lista de consultas por status");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
@@ -92,6 +107,7 @@ public class ConsultaController {
 			con.setIdPaciente(c.getIdPaciente());
 			con.setIdPsicologo(c.getIdPsicologo());
 			con.setIdProntuario(c.getIdProntuario());
+			con.setStatus(c.getStatus());
 			con.setDataConsulta(c.getDataConsulta());
 			service.save(con);
 			logger.debug("Consulta atualizada com sucesso");

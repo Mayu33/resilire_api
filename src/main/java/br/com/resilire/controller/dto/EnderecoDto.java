@@ -10,7 +10,8 @@ import br.com.resilire.model.Endereco;
 public class EnderecoDto {
 
 	private Long idEndereco;
-	private Long idUser;
+	private Long idPsicologo;
+	private Long idPaciente;
 	private String apelido;
 	private String cep;
 	private String rua;
@@ -24,7 +25,8 @@ public class EnderecoDto {
 
 	public EnderecoDto(Endereco endereco) {
 		this.idEndereco = endereco.getIdEndereco();
-		this.idUser = endereco.getIdUser();
+		this.idPsicologo = endereco.getIdPsicologo();
+		this.idPaciente = endereco.getIdPaciente();
 		this.apelido = endereco.getApelido();
 		this.cep = endereco.getCep();
 		this.rua = endereco.getRua();
@@ -37,14 +39,18 @@ public class EnderecoDto {
 	
 	
 	
-	public Long getIdUser() {
-		return idUser;
+	public Long getIdPsicologo() {
+		return idPsicologo;
 	}
-
-	public void setIdUser(Long idUser) {
-		this.idUser = idUser;
+	public void setIdPsicologo(Long idPsicologo) {
+		this.idPsicologo = idPsicologo;
 	}
-
+	public Long getIdPaciente() {
+		return idPaciente;
+	}
+	public void setIdPaciente(Long idPaciente) {
+		this.idPaciente = idPaciente;
+	}
 	public Long getIdEndereco() {
 		return idEndereco;
 	}

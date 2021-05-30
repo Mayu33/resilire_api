@@ -19,4 +19,6 @@ public interface ConsultaService {
 	public List<Consulta> findByIdPaciente(Long idPaciente) throws SQLException;
 	
 	public List<Consulta> findByIdPsicologo(Long idPsicologo) throws SQLException;
+	
+	public List<Consulta> findByStatus(String status) throws SQLException;
 }

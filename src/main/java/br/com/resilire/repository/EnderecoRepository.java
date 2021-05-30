@@ -11,6 +11,8 @@ import br.com.resilire.model.Endereco;
 @Repository
 public interface EnderecoRepository extends JpaRepository<Endereco, Long>{
 
-	public List<Endereco> findByIdUser(Long idUser);
+	public List<Endereco> findByIdPaciente(Long idPaciente);
+	
+	public List<Endereco> findByIdPsicologo(Long idPsicologo);
 	
 }
