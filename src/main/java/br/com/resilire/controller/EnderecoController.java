@@ -1,3 +1,13 @@
+/*
+ * Controller do CRUD de Enderecos
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
+
 package br.com.resilire.controller;
 
 import java.sql.SQLException;
@@ -31,7 +41,7 @@ import io.swagger.annotations.Api;
 @RestController
 @RequestMapping("/endereco")
 @Api(value="API REST Endereços")
-@CrossOrigin(origins="*")
+@CrossOrigin(origins="*") 		 
 public class EnderecoController {
 
 	private final static Logger logger = LoggerFactory.getLogger(EnderecoController.class);
@@ -41,6 +51,7 @@ public class EnderecoController {
 	EnderecoService enderecoService;
 	
 
+	// Retorna endereço pelo ID
 	@GetMapping("/{idEndereco}")
 	public ResponseEntity<List<EnderecoDto>> findById(@PathVariable("idEndereco") Long id, Model model) {
 
@@ -54,6 +65,7 @@ public class EnderecoController {
 		}
 	}
 	
+	// Retorna lista de endereços por ID do paciente
 	@GetMapping("/paciente/{idPaciente}")
 	public ResponseEntity<List<EnderecoDto>> findByIdPaciente(@PathVariable("idPaciente") Long id, Model model) {
 
@@ -67,6 +79,7 @@ public class EnderecoController {
 		}
 	}
 	
+	// Retorna lista de endereços por ID do psicologo
 	@GetMapping("/psicologo/{idPsicologo}")
 	public ResponseEntity<List<EnderecoDto>> findByIdPsicologo(@PathVariable("idPsicologo") Long id, Model model) {
 
@@ -81,6 +94,7 @@ public class EnderecoController {
 
 	}
 
+	// Atualiza um endereço por ID
 	@PutMapping("/{id}")
 	@Transactional
 	public ResponseEntity<EnderecoDto> atualizar(@PathVariable Long id, @RequestBody @Validated Endereco e) throws SQLException {
@@ -109,6 +123,7 @@ public class EnderecoController {
 		
 	}
 
+	// Cadastra um novo endereço
 	@PostMapping("/")
 	@Transactional
 	public ResponseEntity<EnderecoDto> cadastrar(@RequestBody @Validated Endereco endereco) {
@@ -127,6 +142,7 @@ public class EnderecoController {
 		}
 	}
 	
+	// Deleta um endereço pelo ID
 	@DeleteMapping("/{id}")
 	@Transactional
 	public ResponseEntity<EnderecoDto> delete(@PathVariable Long id){

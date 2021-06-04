@@ -1,3 +1,12 @@
+/*
+ * Controller do CRUD de Pacientes
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.controller;
 
 import java.sql.SQLException;
@@ -40,7 +49,7 @@ public class PacienteController {
 	@Autowired
 	PacienteService service;
 	
-	
+	// Lista pacientes por ID
 	@GetMapping("/{idPaciente}")
 	public ResponseEntity<List<PacienteDto>> findById(@PathVariable("idPaciente") Long id, Model model) {
 
@@ -55,6 +64,7 @@ public class PacienteController {
 
 	}
 
+	// Atualiza o paciente por ID
 	@PutMapping("/{id}")
 	@Transactional
 	public ResponseEntity<PacienteDto> atualizar(@PathVariable Long id, @RequestBody @Validated Paciente p) throws SQLException {
@@ -76,12 +86,10 @@ public class PacienteController {
 			logger.debug("Erro ao atualizar paciente");
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-
-		
-		
 		
 	}
 
+	// Cadastra um novo paciente
 	@PostMapping("/")
 	@Transactional
 	public ResponseEntity<PacienteDto> cadastrar(@RequestBody @Validated Paciente paciente) {
@@ -100,6 +108,7 @@ public class PacienteController {
 		}
 	}
 	
+	// Deleta um paciente e endereço por ID
 	@DeleteMapping("/{id}")
 	@Transactional
 	public ResponseEntity<PacienteDto> delete(@PathVariable Long id){
@@ -114,6 +123,7 @@ public class PacienteController {
 		}
 	}
 	
+	// Lista todos os pacientes
 	@GetMapping("/")
 	@Transactional
 	public ResponseEntity<List<PacienteDto>> findAll(){

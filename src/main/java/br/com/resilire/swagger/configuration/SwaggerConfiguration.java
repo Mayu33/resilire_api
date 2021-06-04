@@ -1,3 +1,13 @@
+/*
+ * Classe de configuração da interface Swagger para documentação da API
+ * 
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.swagger.configuration;
 
 import org.springframework.context.annotation.Bean;

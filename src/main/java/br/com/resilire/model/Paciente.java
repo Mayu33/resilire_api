@@ -1,3 +1,11 @@
+/*
+ * Model do objeto Paciente
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
 package br.com.resilire.model;
 
 import java.io.Serializable;

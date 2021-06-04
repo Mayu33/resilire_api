@@ -1,3 +1,12 @@
+/*
+ * Controller do CRUD de Psicologo
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.controller;
 
 import java.sql.SQLException;
@@ -40,7 +49,7 @@ private final static Logger logger = LoggerFactory.getLogger(PacienteController.
 	@Autowired
 	PsicologoService service;
 	
-	
+	// Lista psicologos por ID
 	@GetMapping("/{idPsicologo}")
 	public ResponseEntity<List<PsicologoDto>> findById(@PathVariable("idPsicologo") Long id, Model model) {
 
@@ -55,6 +64,7 @@ private final static Logger logger = LoggerFactory.getLogger(PacienteController.
 
 	}
 
+	// Atualiza psicologo por ID
 	@PutMapping("/{id}")
 	@Transactional
 	public ResponseEntity<PsicologoDto> atualizar(@PathVariable Long id, @RequestBody @Validated Psicologo p) throws SQLException {
@@ -77,11 +87,9 @@ private final static Logger logger = LoggerFactory.getLogger(PacienteController.
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
-		
-		
-		
 	}
 
+	// Cadastra um novo psicologo
 	@PostMapping("/")
 	@Transactional
 	public ResponseEntity<PsicologoDto> cadastrar(@RequestBody @Validated Psicologo psicologo) {
@@ -100,6 +108,7 @@ private final static Logger logger = LoggerFactory.getLogger(PacienteController.
 		}
 	}
 	
+	// Deleta um psicologo e os endereços relacionados a ele
 	@DeleteMapping("/{id}")
 	@Transactional
 	public ResponseEntity<PsicologoDto> delete(@PathVariable Long id){
@@ -114,6 +123,7 @@ private final static Logger logger = LoggerFactory.getLogger(PacienteController.
 		}
 	}
 	
+	// Lista todos os psicologos
 	@GetMapping("/")
 	@Transactional
 	public ResponseEntity<List<PsicologoDto>> findAll(){

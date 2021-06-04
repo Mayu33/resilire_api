@@ -1,3 +1,14 @@
+/*
+ * Interface do Service de Prontuário
+ * 
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
+
 package br.com.resilire.service;
 
 import java.sql.SQLException;

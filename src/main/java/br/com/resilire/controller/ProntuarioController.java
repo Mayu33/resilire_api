@@ -1,3 +1,12 @@
+/*
+ * Controller do CRUD de Prontuario
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.controller;
 
 import java.sql.SQLException;
@@ -40,7 +49,7 @@ public class ProntuarioController {
 	@Autowired
 	ProntuarioService service;
 	
-	
+	// Lista prontuarios pelo ID
 	@GetMapping("/{idProntuario}")
 	public ResponseEntity<List<ProntuarioDto>> findById(@PathVariable("idProntuario") Long id, Model model) {
 
@@ -56,6 +65,7 @@ public class ProntuarioController {
 
 	}
 	
+	// Lista prontuarios por Paciente
 	@GetMapping("/paciente/{idPaciente}")
 	public ResponseEntity<List<ProntuarioDto>> findByIdPaciente(@PathVariable("idPaciente") Long id, Model model) {
 
@@ -70,6 +80,7 @@ public class ProntuarioController {
 
 	}
 
+	// Atualiza um prontuario por ID
 	@PutMapping("/{id}")
 	@Transactional
 	public ResponseEntity<ProntuarioDto> atualizar(@PathVariable Long id, @RequestBody @Validated Prontuario p) throws SQLException {
@@ -94,6 +105,7 @@ public class ProntuarioController {
 		
 	}
 
+	// Cadastra um novo prontuário
 	@PostMapping("/")
 	@Transactional
 	public ResponseEntity<ProntuarioDto> cadastrar(@RequestBody @Validated Prontuario prontuario) {
@@ -112,6 +124,7 @@ public class ProntuarioController {
 		}
 	}
 	
+	// Deleta um prontuário por ID
 	@DeleteMapping("/{id}")
 	@Transactional
 	public ResponseEntity<ProntuarioDto> delete(@PathVariable Long id){
@@ -126,6 +139,7 @@ public class ProntuarioController {
 		}
 	}
 	
+	// Lista todos os prontuários
 	@GetMapping("/")
 	@Transactional
 	public ResponseEntity<List<ProntuarioDto>> findAll(){

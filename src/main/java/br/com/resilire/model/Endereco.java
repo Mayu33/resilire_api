@@ -1,3 +1,12 @@
+/*
+ * Model do objeto Endereco
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.model;
 
 import java.io.Serializable;
@@ -20,7 +29,7 @@ public class Endereco implements Serializable{
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name="idEndereco")
 	private Long idEndereco;
-	// idUser se refere ao paciente ou psicólogo que é dono do endereço
+	// Deverá ser utilizado apenas o idPaciente ou idPsicologo
 	@Column(name="idPaciente")
 	private Long idPaciente;
 	@Column(name="idPsicologo")

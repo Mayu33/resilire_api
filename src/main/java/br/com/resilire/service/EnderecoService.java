@@ -1,3 +1,13 @@
+/*
+ * Interface do Service de Endereco
+ * 
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.service;
 
 
@@ -22,5 +32,9 @@ public interface EnderecoService {
 	public List<Endereco> findByIdPaciente(Long idPaciente) throws SQLException;
 	
 	public List<Endereco> findByIdPsicologo(Long idPsicologo) throws SQLException;
+	
+	public void deleteByIdPsicologo(Long idPsicologo) throws SQLException;
+	
+	public void deleteByIdPaciente(Long idPaciente) throws SQLException;
 
 }

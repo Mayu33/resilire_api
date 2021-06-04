@@ -1,3 +1,12 @@
+/*
+ * Controller do CRUD de Consultas
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.controller;
 
 import java.sql.SQLException;
@@ -40,6 +49,7 @@ public class ConsultaController {
 	@Autowired
 	ConsultaService service;
 	
+	// Retorna lista de consultas por ID
 	@GetMapping("/{idConsulta}")
 	public ResponseEntity<List<ConsultaDto>> findById(@PathVariable("idConsulta") Long id, Model model) {
 
@@ -54,6 +64,7 @@ public class ConsultaController {
 
 	}
 	
+	// Retorna lista de consultas por status
 	@GetMapping("/{status}")
 	public ResponseEntity<List<ConsultaDto>> findByStatus(@RequestParam(value="status") String status, Model model) {
 
@@ -68,6 +79,7 @@ public class ConsultaController {
 
 	}
 	
+	// Retorna lista de consultas por paciente
 	@GetMapping("/paciente/{idPaciente}")
 	public ResponseEntity<List<ConsultaDto>> findByIdPaciente(@PathVariable("idPaciente") Long id, Model model) {
 
@@ -82,6 +94,7 @@ public class ConsultaController {
 
 	}
 	
+	// Retorna lista de consultas por psicologo
 	@GetMapping("/psicologo/{idPsicologo}")
 	public ResponseEntity<List<ConsultaDto>> findByIdPsicologo(@PathVariable("idPsicologo") Long id, Model model) {
 
@@ -96,6 +109,7 @@ public class ConsultaController {
 
 	}
 
+	// Atualiza uma consulta pelo ID
 	@PutMapping("/{id}")
 	@Transactional
 	public ResponseEntity<ConsultaDto> atualizar(@PathVariable Long id, @RequestBody @Validated Consulta c) throws SQLException {
@@ -122,6 +136,7 @@ public class ConsultaController {
 		
 	}
 
+	// Cadastra uma nova consulta
 	@PostMapping("/")
 	@Transactional
 	public ResponseEntity<ConsultaDto> cadastrar(@RequestBody @Validated Consulta consulta) {
@@ -140,6 +155,7 @@ public class ConsultaController {
 		}
 	}
 	
+	// Deleta uma consulta pelo ID
 	@DeleteMapping("/{id}")
 	@Transactional
 	public ResponseEntity<ConsultaDto> delete(@PathVariable Long id){
@@ -154,6 +170,7 @@ public class ConsultaController {
 		}
 	}
 	
+	// Lista todas as consultas
 	@GetMapping("/")
 	@Transactional
 	public ResponseEntity<List<ConsultaDto>> findAll(){

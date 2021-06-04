@@ -1,3 +1,12 @@
+/*
+ * DTO da classe Prontuario
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.controller.dto;
 
 import java.util.List;

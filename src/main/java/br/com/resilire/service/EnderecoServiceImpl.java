@@ -1,3 +1,13 @@
+/*
+ * Implementação do Service de Endereco
+ * 
+ * Resilire API v1
+ * 
+ * Autor: Mayara Barranco da Silva
+ * Última alteração: 03/06/2021
+ * 
+ */
+
 package br.com.resilire.service;
 
 
@@ -27,6 +37,7 @@ public class EnderecoServiceImpl implements EnderecoService{
 	EnderecoRepository enderecoRepository;
 	
 
+	// Salva um novo endereço
 	@Override
 	public Endereco save(Endereco endereco) throws SQLException{
 		
@@ -34,12 +45,13 @@ public class EnderecoServiceImpl implements EnderecoService{
 				
 	}
 	
-	
+	// Lista um endereço pelo ID
 	@Override
 	public Optional<Endereco> findById(Long idEndereco) throws SQLException{
 		return enderecoRepository.findById(idEndereco);
 	}
 	
+	// Deleta um endereco pelo ID
 	@Override
 	public void deleteById(Long idEndereco) throws SQLException{
 		
@@ -47,23 +59,38 @@ public class EnderecoServiceImpl implements EnderecoService{
 		
 	}
 	
+	// Lista todos os enderecos
 	@Override
 	public List<Endereco> list() throws SQLException {
 		return enderecoRepository.findAll();
 	}
 
-
+	// Lista todos os enderecos relacionados ao ID do paciente
 	@Override
 	public List<Endereco> findByIdPaciente(Long idPaciente) throws SQLException {
 		// TODO Auto-generated method stub
 		return enderecoRepository.findByIdPaciente(idPaciente);
 	}
 	
+	// Lista todos os enderecos relacionados ao ID do psicólogo
 	@Override
 	public List<Endereco> findByIdPsicologo(Long idPsicologo) throws SQLException {
 		// TODO Auto-generated method stub
 		return enderecoRepository.findByIdPsicologo(idPsicologo);
 	}
+
+	@Override
+	public void deleteByIdPsicologo(Long idPsicologo) throws SQLException {
+		// TODO Auto-generated method stub
+		enderecoRepository.deleteByIdPsicologo(idPsicologo);
+	}
+
+	@Override
+	public void deleteByIdPaciente(Long idPaciente) throws SQLException {
+		// TODO Auto-generated method stub
+		enderecoRepository.deleteByIdPaciente(idPaciente);
+	}
+	
 	
 	
 	
